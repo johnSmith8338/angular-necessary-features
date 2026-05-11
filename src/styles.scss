@@ -1,1 +1,53 @@
 /* You can add global styles to this file, and also import other style files */
+
+@layer reset {
+    html {
+        interpolate-size: allow-keywords;
+        font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    }
+
+    body {
+        margin: 0;
+    }
+
+    h1,
+    h2,
+    h3,
+    h4,
+    p {
+        margin-block: 0px;
+    }
+
+    ul {
+        margin: 0;
+        padding: 0;
+        list-style: none;
+    }
+
+    button {
+        border-color: transparent;
+        outline-color: transparent;
+        background-color: transparent;
+        padding: 8px;
+        box-sizing: border-box;
+        cursor: pointer;
+    }
+}
+
+@layer global {
+    .button {
+        min-block-size: 40px;
+        display: grid;
+        place-items: center;
+        corner-shape: squircle;
+        border-radius: 16px;
+        border: 1px solid hsl(0 0% 100% / 0.2);
+        background-color: #333;
+        color: #dfdfdf;
+        text-decoration: none;
+        line-height: 1;
+        padding-block: 8px;
+        padding-inline: 24px;
+        box-sizing: border-box;
+    }
+}
