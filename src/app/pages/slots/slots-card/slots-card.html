@@ -1,0 +1,24 @@
+@if (header()) {
+    <div class="card-header">
+        <!-- shows content if it's in h3 tag -->
+        <ng-content select="h3"></ng-content>
+    </div>
+}
+<div class="card-body">
+    <ng-content ></ng-content>
+    <!-- show app-slots-buttons in body area if header is empty -->
+    @if (footer() && !header()) {
+        <ng-container *ngTemplateOutlet="footerTmp"></ng-container>
+    }
+</div>
+@if(footer() && header()){
+    <div class="card-footer">
+        <!-- shows content from app-slots-buttons component -->
+        <ng-container *ngTemplateOutlet="footerTmp"></ng-container>
+    </div>
+}
+
+<!-- do this if you need to render one block in different conditions -->
+<ng-template #footerTmp>
+    <ng-content select="app-slots-buttons"></ng-content>
+</ng-template>

@@ -1,0 +1,12 @@
+:host {
+  display: block;
+  padding-block-start: 64px;
+}
+
+mark {
+  inline-size: fit-content;
+  border-radius: 16px;
+  padding-block: 4px;
+  padding-inline: 8px;
+  text-transform: lowercase;
+}

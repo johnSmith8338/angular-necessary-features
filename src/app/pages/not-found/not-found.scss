@@ -1,3 +1,5 @@
 :host {
-  display: block;
+  display: grid;
+  place-items: center;
+  gap: 16px;
 }

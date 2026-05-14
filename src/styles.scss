@@ -37,6 +37,7 @@
 @layer global {
     .button {
         min-block-size: 40px;
+        inline-size: fit-content;
         display: grid;
         place-items: center;
         corner-shape: squircle;
@@ -49,5 +50,11 @@
         padding-block: 8px;
         padding-inline: 24px;
         box-sizing: border-box;
+
+        &.outline {
+            background-color: #dfdfdf;
+            border: 1px solid hsl(0 0% 0% / 0.2);
+            color: #333;
+        }
     }
 }

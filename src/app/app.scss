@@ -13,6 +13,10 @@ header {
     }
 }
 
+main {
+    padding-inline: 16px;
+}
+
 h2 {
     font-size: clamp(1.125rem, 3vw, 1.5rem);
 }
@@ -31,6 +35,10 @@ h2 {
 }
 
 .menu-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 4px;
+    max-inline-size: 480px;
     position: absolute;
     position-anchor: --menu;
     position-area: bottom span-left;
