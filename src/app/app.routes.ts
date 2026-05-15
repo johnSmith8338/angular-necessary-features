@@ -2,6 +2,7 @@ import { Routes } from '@angular/router';
 import { ShowMore } from './pages/show-more/show-more';
 import { NotFound } from './pages/not-found/not-found';
 import { Slots } from './pages/slots/slots';
+import { StepsByButtons } from './pages/steps-by-buttons/steps-by-buttons';
 
 export const routes: Routes = [
     {
@@ -17,6 +18,14 @@ export const routes: Routes = [
         component: Slots,
         data: {
             title: 'slots',
+            showInMenu: true,
+        }
+    },
+    {
+        path: 'steps',
+        component: StepsByButtons,
+        data: {
+            title: 'steps',
             showInMenu: true,
         }
     },

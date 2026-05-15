@@ -1,0 +1,43 @@
+@if (submitted()) {
+    <div class="submitted">
+        <h2>Ok!</h2>
+        <p>Submitted successfully</p>
+        <button class="button" type="reset" (click)="reset()">Reset</button>
+    </div>
+}@else {
+    <!-- #stepper="stepper" connecting directive to component and now we can use template variable -->
+    <div class="stepper" appStepTracker [stepLabels]="steps()" #stepper="stepper">
+        <header class="header">
+            <p class="step-count">step {{stepper.stepIndex()+1}} of {{stepper.totalSteps()}}</p>
+            <h2>{{stepper.currentLabel()}}</h2>
+        </header>
+        <div class="body">
+            @if (stepper.stepIndex()===0) {
+                <section>
+                    <h3>Title 1</h3>
+                    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Distinctio odit commodi non quia modi itaque corrupti quaerat quidem ducimus sed.</p>
+                </section>
+            }
+            @if (stepper.stepIndex()===1) {
+                <section>
+                    <h3>Title 2</h3>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Corporis maxime exercitationem unde veritatis ea iste, fugit rem repellendus aliquam quas magnam quidem magni iure excepturi, neque quasi dolor id voluptate.</p>
+                </section>
+            }
+            @if (stepper.stepIndex()===2) {
+                <section>
+                    <h3>Title 3</h3>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Saepe, repudiandae?</p>
+                </section>
+            }
+        </div>
+        <footer class="footer">
+            <button class="button outline" type="button" (click)="stepper.prev()" [disabled]="stepper.isFirstStep()">Back</button>
+            @if (!stepper.isLastStep()) {
+                <button class="button outline" type="button" (click)="stepper.next()">Next</button>
+            }@else {
+                <button class="button" type="submit" (click)="submit()">Submit</button>
+            }
+        </footer>
+    </div>
+}
