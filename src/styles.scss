@@ -32,6 +32,12 @@
         box-sizing: border-box;
         cursor: pointer;
     }
+
+    img {
+        display: grid;
+        width: 100%;
+        height: auto;
+    }
 }
 
 @layer global {

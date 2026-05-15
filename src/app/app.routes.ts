@@ -3,6 +3,7 @@ import { ShowMore } from './pages/show-more/show-more';
 import { NotFound } from './pages/not-found/not-found';
 import { Slots } from './pages/slots/slots';
 import { StepsByButtons } from './pages/steps-by-buttons/steps-by-buttons';
+import { DeferLoading } from './pages/defer-loading/defer-loading';
 
 export const routes: Routes = [
     {
@@ -26,6 +27,14 @@ export const routes: Routes = [
         component: StepsByButtons,
         data: {
             title: 'steps',
+            showInMenu: true,
+        }
+    },
+    {
+        path: 'defer-load',
+        component: DeferLoading,
+        data: {
+            title: '@defer',
             showInMenu: true,
         }
     },

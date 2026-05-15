@@ -9,7 +9,12 @@
     <ul class="menu-list" [class.opened]="menuOpened()">
       @for (item of menuItems(); track item.link) {
         <li class="menu-item">
-          <a class="button" [routerLink]="item.link" routerLinkActive="active" [routerLinkActiveOptions]="{exact:true}">{{item.title}}</a>
+          <a class="button" 
+            [routerLink]="item.link" 
+            routerLinkActive="active" 
+            [routerLinkActiveOptions]="{exact:true}"
+            (click)="closeMenu()">
+            {{item.title}}</a>
         </li>
       }
     </ul>

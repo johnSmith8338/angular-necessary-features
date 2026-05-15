@@ -29,4 +29,8 @@ export class App {
   toggleMenu() {
     this.menuOpened.update(val => !val);
   }
+
+  closeMenu() {
+    this.menuOpened.set(false);
+  }
 }

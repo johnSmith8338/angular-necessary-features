@@ -1,0 +1,13 @@
+@defer (when data()) {
+    <div class="image-wrapper">
+        <img [src]="data()?.image" class="image" alt="">
+    </div>
+    <h2>{{data()?.title}}</h2>
+    <p>{{data()?.text}}</p>
+}@placeholder {
+    <div class="image-wrapper">
+        <span class="image-placeholder"></span>
+    </div>
+    <h2 class="title-placeholder"></h2>
+    <p class="text-placeholder"></p>
+}
