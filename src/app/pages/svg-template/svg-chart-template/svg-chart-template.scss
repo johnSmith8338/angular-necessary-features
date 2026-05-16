@@ -32,12 +32,15 @@
 
   &.active {
     .rect {
-      fill: #f8f412;
+      fill: #2c9f1d;
+    }
 
+    .label {
+      fill: #2c9f1d;
     }
 
     .count {
-      fill: #787878;
+      fill: #dedede;
     }
   }
 }

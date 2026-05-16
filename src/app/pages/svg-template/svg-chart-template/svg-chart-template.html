@@ -11,7 +11,7 @@
         @for (item of chartItems(); track $index; let index=$index) {
             <g (click)="toggleActive(index)" [class.active]="activeIndex()===index" class="group">
                 <rect [attr.width]="item.count * 10" height="19" [attr.y]="21 * index" class="rect"></rect>
-                <text [attr.x]="item.count * 10 + 5" [attr.y]="index * 21 + 15">{{item.label}}</text>
+                <text [attr.x]="item.count * 10 + 5" [attr.y]="index * 21 + 15" class="label">{{item.label}}</text>
                 <text [attr.x]="5" [attr.y]="index * 21 + 15" class="count">{{item.count}}</text>
             </g>
         }

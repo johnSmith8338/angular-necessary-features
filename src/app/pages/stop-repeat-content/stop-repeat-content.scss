@@ -1,0 +1,31 @@
+:host {
+  display: block;
+  padding-block-start: 64px;
+}
+
+.content {
+  display: grid;
+  gap: 16px;
+  max-inline-size: 480px;
+  margin-inline: auto;
+}
+
+.button {
+  position: relative;
+  min-inline-size: 240px;
+  margin-inline: auto;
+
+  .title {
+    font-size: 16px;
+    font-weight: 600;
+  }
+
+  .subtitle {
+    color: #bbbbbb;
+  }
+
+  svg {
+    position: absolute;
+    inset-inline-end: 16px;
+  }
+}

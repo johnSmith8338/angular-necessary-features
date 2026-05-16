@@ -7,6 +7,7 @@ header {
     justify-content: space-between;
     align-items: center;
     padding-inline: 16px;
+    background-color: #fff;
 
     @media (width>=1024px) {
         block-size: 64px;
@@ -15,6 +16,7 @@ header {
 
 main {
     padding-inline: 16px;
+    padding-block-end: 32px;
 }
 
 h2 {

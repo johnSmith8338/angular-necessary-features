@@ -1,0 +1,40 @@
+<div class="content">
+
+    <ng-template #button let-title="title" let-subtitle="subtitle">
+        <span class="title">{{title}}</span>
+        @if (subtitle) {
+            <span class="subtitle">{{subtitle}}</span>
+        }
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M5 12H19M12 19L19 12L12 5" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+    </ng-template>
+
+    <h2>Title</h2>
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quia, nobis maiores iste nostrum debitis eum laborum culpa, aliquam at provident obcaecati minus voluptates quod ad iure omnis saepe doloribus atque molestias eaque tempora nihil animi odio? Esse quos, saepe tempora distinctio magni dolore. Sequi ipsum iste beatae consectetur reprehenderit quia quam velit cum obcaecati quasi. Vel similique non quos. Blanditiis consequuntur praesentium neque ratione facere porro nesciunt dolores et, eum repudiandae pariatur hic accusantium sit laudantium. Alias sed iusto delectus? Non dolorum, quisquam repellendus sunt veniam saepe. Consequuntur, expedita exercitationem, modi obcaecati esse harum repellat maiores, eius natus iste dicta?</p>
+
+    <button class="button" (click)="signUp()">
+        <ng-container *ngTemplateOutlet="button; context: {
+            title:'Sign up',
+            subtitle:'And become a champ'
+        }"></ng-container>
+    </button>
+
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quis, dolore.</p>
+
+    <button class="button" (click)="showNow()">
+        <ng-container *ngTemplateOutlet="button; context: {
+            title:'Show now'
+        }"></ng-container>
+    </button>
+
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aut dolorum similique et quia nesciunt deleniti, necessitatibus repellat quibusdam eos obcaecati sunt culpa molestiae, impedit sapiente quis animi ducimus esse laborum natus? Tenetur quas maxime aliquid quo temporibus animi nihil repellendus?</p>
+
+    <button class="button" (click)="signIn()">
+        <ng-container *ngTemplateOutlet="button; context: {
+            title:'Sign in'
+        }"></ng-container>
+    </button>
+
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. At soluta recusandae tempore et nihil dolores optio earum itaque, sint nam, eaque accusamus incidunt atque dolorum veritatis molestiae sed eligendi totam. Doloremque, odit aperiam consequuntur debitis animi deserunt, praesentium deleniti saepe itaque tempora ad. Consequuntur minus porro iusto similique excepturi nam. Dolor molestiae cupiditate obcaecati doloremque debitis ad rem ipsum ullam, voluptatum quis, suscipit sit voluptatem veritatis incidunt distinctio repellendus natus laborum, recusandae eum quasi ipsam! Sapiente porro autem quo perferendis atque, consequuntur unde ipsum corrupti nesciunt veniam quidem corporis ea quis tempore saepe accusantium! Modi ipsa nam consequuntur itaque suscipit!</p>
+</div>

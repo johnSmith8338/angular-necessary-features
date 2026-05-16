@@ -5,6 +5,7 @@ import { Slots } from './pages/slots/slots';
 import { StepsByButtons } from './pages/steps-by-buttons/steps-by-buttons';
 import { DeferLoading } from './pages/defer-loading/defer-loading';
 import { SvgTemplate } from './pages/svg-template/svg-template';
+import { StopRepeatContent } from './pages/stop-repeat-content/stop-repeat-content';
 
 export const routes: Routes = [
     {
@@ -44,6 +45,14 @@ export const routes: Routes = [
         component: SvgTemplate,
         data: {
             title: 'svg',
+            showInMenu: true,
+        }
+    },
+    {
+        path: 'stop-repeat-content',
+        component: StopRepeatContent,
+        data: {
+            title: 'ngTemplateOutlet',
             showInMenu: true,
         }
     },
