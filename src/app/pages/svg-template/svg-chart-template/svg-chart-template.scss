@@ -1,0 +1,49 @@
+:host {
+  display: grid;
+  grid-auto-flow: column;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+}
+
+.text {
+  li {
+    display: grid;
+    grid-template-columns: 24px 1fr;
+  }
+}
+
+.rect {
+  fill: #787878;
+}
+
+.group {
+  cursor: pointer;
+
+  &:hover {
+    .rect {
+      fill: transparent;
+      stroke: #787878;
+    }
+
+    .count {
+      fill: #787878;
+    }
+  }
+
+  &.active {
+    .rect {
+      fill: #f8f412;
+
+    }
+
+    .count {
+      fill: #787878;
+    }
+  }
+}
+
+.count {
+  fill: #dedede;
+  font-size: 14px;
+  font-weight: 600;
+}

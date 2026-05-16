@@ -4,6 +4,7 @@ import { NotFound } from './pages/not-found/not-found';
 import { Slots } from './pages/slots/slots';
 import { StepsByButtons } from './pages/steps-by-buttons/steps-by-buttons';
 import { DeferLoading } from './pages/defer-loading/defer-loading';
+import { SvgTemplate } from './pages/svg-template/svg-template';
 
 export const routes: Routes = [
     {
@@ -35,6 +36,14 @@ export const routes: Routes = [
         component: DeferLoading,
         data: {
             title: '@defer',
+            showInMenu: true,
+        }
+    },
+    {
+        path: 'svg',
+        component: SvgTemplate,
+        data: {
+            title: 'svg',
             showInMenu: true,
         }
     },
