@@ -1,10 +1,33 @@
-<app-slots-card>
+<div class="controls">
+    <label class="toggle">
+        <input type="checkbox" [checked]="showHeader()" (change)="toggleHeader()" />
+        <span>Show header</span>
+    </label>
+    <label class="toggle">
+        <input type="checkbox" [checked]="showFooter()" (change)="toggleFooter()" />
+        <span>Show footer</span>
+    </label>
+</div>
+
+<app-slots-card [hideHeader]="!showHeader()" [hideFooter]="!showFooter()">
     <h3 #header>Main Title</h3>
     <h4>Some title</h4>
     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi, molestiae.</p>
-    <mark>in Progress</mark>
+    
+    @for (item of items(); track item.id) {
+        <div class="new-line">
+            <p>{{item.text}}</p>
+            <button class="button danger" (click)="remove(item.id)">Delete</button>
+        </div>
+    }
+
+    @if (editing()) {
+        <textarea [value]="draft()" (input)="updateDraft($event)"></textarea>
+    }
+
     <app-slots-buttons>
-        <button class="button outline">edit</button>
-        <button type="submit" class="button">Submit</button>
+        <button class="button outline" (click)="toggleEdit()">edit</button>
+        <button type="button" class="button" (click)="submit()" [disabled]="loading()">Submit</button>
+        <mark [class.loading]="loading()">{{loading() ? 'in progress' : 'success'}}</mark>
     </app-slots-buttons>
 </app-slots-card>

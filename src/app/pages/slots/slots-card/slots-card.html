@@ -1,4 +1,4 @@
-@if (header()) {
+@if (hasHeaderVisible()) {
     <div class="card-header">
         <!-- shows content if it's in h3 tag -->
         <ng-content select="h3"></ng-content>
@@ -7,11 +7,11 @@
 <div class="card-body">
     <ng-content ></ng-content>
     <!-- show app-slots-buttons in body area if header is empty -->
-    @if (footer() && !header()) {
+    @if (footer() && !hasHeaderVisible() && !hideFooter()) {
         <ng-container *ngTemplateOutlet="footerTmp"></ng-container>
     }
 </div>
-@if(footer() && header()){
+@if(footer() && hasHeaderVisible() && !hideFooter()){
     <div class="card-footer">
         <!-- shows content from app-slots-buttons component -->
         <ng-container *ngTemplateOutlet="footerTmp"></ng-container>
