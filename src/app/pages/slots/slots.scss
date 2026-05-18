@@ -28,6 +28,7 @@
   display: flex;
   align-items: center;
   gap: 4px;
+  cursor: pointer;
 
   input[type='checkbox'] {
     appearance: none;
@@ -83,4 +84,8 @@ mark {
   display: flex;
   gap: 16px;
   justify-content: space-between;
+}
+
+.button {
+  height: fit-content;
 }

@@ -8,11 +8,13 @@
     <ng-content ></ng-content>
     <!-- show app-slots-buttons in body area if header is empty -->
     @if (footer() && !hasHeaderVisible() && !hideFooter()) {
+        <p class="info">We show footer as part of card body</p>
         <ng-container *ngTemplateOutlet="footerTmp"></ng-container>
     }
 </div>
 @if(footer() && hasHeaderVisible() && !hideFooter()){
     <div class="card-footer">
+        <p class="info">We show footer as independent unit when block has header</p>
         <!-- shows content from app-slots-buttons component -->
         <ng-container *ngTemplateOutlet="footerTmp"></ng-container>
     </div>

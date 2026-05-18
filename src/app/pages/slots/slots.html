@@ -10,7 +10,7 @@
 </div>
 
 <app-slots-card [hideHeader]="!showHeader()" [hideFooter]="!showFooter()">
-    <h3 #header>Main Title</h3>
+    <h3 #header>We show header only if it has h3 tag inside</h3>
     <h4>Some title</h4>
     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi, molestiae.</p>
     
@@ -28,6 +28,8 @@
     <app-slots-buttons>
         <button class="button outline" (click)="toggleEdit()">edit</button>
         <button type="button" class="button" (click)="submit()" [disabled]="loading()">Submit</button>
-        <mark [class.loading]="loading()">{{loading() ? 'in progress' : 'success'}}</mark>
+        @if (items().length>0 || loading()) {
+            <mark [class.loading]="loading()">{{loading() ? 'in progress' : 'success'}}</mark>
+        }
     </app-slots-buttons>
 </app-slots-card>
