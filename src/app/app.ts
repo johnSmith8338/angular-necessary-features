@@ -2,10 +2,11 @@ import { Component, inject, signal } from '@angular/core';
 import { RouterOutlet, RouterLinkWithHref, RouterLinkActive, Router, NavigationEnd } from '@angular/router';
 import { MenuItem, MenuSvc } from './services/menu-svc';
 import { filter } from 'rxjs';
+import { ClickOutside } from "./directives/click-outside";
 
 @Component({
   selector: 'app-root',
-  imports: [RouterOutlet, RouterLinkWithHref, RouterLinkActive],
+  imports: [RouterOutlet, RouterLinkWithHref, RouterLinkActive, ClickOutside],
   templateUrl: './app.html',
   styleUrl: './app.scss'
 })

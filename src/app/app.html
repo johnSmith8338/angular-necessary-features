@@ -1,12 +1,14 @@
 <header>
-  <h2>test project</h2>
+  <h2>
+    <a [routerLink]="'/'">test project</a>
+  </h2>
   <button class="menu-button" (click)="toggleMenu()">
     @for (_ of [].constructor(3); track $index) {
       <span class="dash"></span>
     }
   </button>
   @if (menuOpened()) {
-    <ul class="menu-list" [class.opened]="menuOpened()">
+    <ul class="menu-list" [class.opened]="menuOpened()" (clickOutside)="menuOpened.set(false)">
       @for (item of menuItems(); track item.link) {
         <li class="menu-item">
           <a class="button" 

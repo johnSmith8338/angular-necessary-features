@@ -1,0 +1,10 @@
+<button class="button" (click)="isOpen.update(v=>!v)">Menu</button>
+
+@if (isOpen()) {
+    <ul (clickOutside)="isOpen.set(false)">
+        <li><a href="#">Notifications</a></li>
+        <li><a href="#">Tasks</a></li>
+        <li><a href="#">Settings</a></li>
+        <li><a href="#">Logout</a></li>
+    </ul>
+}

@@ -1,0 +1,42 @@
+:host {
+  display: block;
+  position: relative;
+}
+
+.button {
+  margin-inline-start: auto;
+}
+
+ul {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  background-color: #707070;
+  border-radius: 8px;
+  corner-shape: squircle;
+  border: 1px solid hsl(0 0% 0% / 0.2);
+  display: grid;
+  inline-size: max-content;
+  position: absolute;
+  top: calc(100% + 4px);
+  right: 0;
+  overflow: clip;
+
+  li {
+    display: grid;
+  }
+}
+
+a {
+  padding-block: 8px;
+  padding-inline: 16px;
+  color: inherit;
+  text-decoration: none;
+}
+
+@media (hover:hover) {
+  a:hover {
+    background-color: #f8f8f8;
+    color: #333;
+  }
+}

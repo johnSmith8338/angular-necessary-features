@@ -6,6 +6,7 @@ import { StepsByButtons } from './pages/steps-by-buttons/steps-by-buttons';
 import { DeferLoading } from './pages/defer-loading/defer-loading';
 import { SvgTemplate } from './pages/svg-template/svg-template';
 import { StopRepeatContent } from './pages/stop-repeat-content/stop-repeat-content';
+import { ClickOutsideTest } from './pages/click-outside-test/click-outside-test';
 
 export const routes: Routes = [
     {
@@ -53,6 +54,14 @@ export const routes: Routes = [
         component: StopRepeatContent,
         data: {
             title: 'ngTemplateOutlet',
+            showInMenu: true,
+        }
+    },
+    {
+        path: 'click-outside-directive',
+        component: ClickOutsideTest,
+        data: {
+            title: 'click-outside',
             showInMenu: true,
         }
     },
