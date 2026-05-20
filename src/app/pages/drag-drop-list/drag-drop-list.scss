@@ -1,0 +1,48 @@
+@use 'import' as app;
+
+:host {
+  display: block;
+  padding-block-start: 64px;
+}
+
+.content {
+  padding: 16px;
+  margin-inline: auto;
+  @extend %card-view;
+}
+
+.header {
+  padding-block-end: 16px;
+  border-bottom: 1px solid hsl(0 0% 0% / 0.2);
+}
+
+.list {
+  display: grid;
+  gap: 8px;
+}
+
+.item {
+  grid-auto-flow: column;
+  align-items: center;
+  justify-content: space-between;
+  padding-inline: 16px;
+  padding-block: 8px;
+  border-radius: 8px;
+  background-color: #fff;
+  cursor: grab;
+  @extend %card-view;
+}
+
+.checkbox {
+  font-size: 24px;
+}
+
+.cdk-drag-preview {
+  scale: 0.7;
+  box-shadow: 0 8px 20px hsl(0 0% 0% / 0.2);
+}
+
+.cdk-drag-placeholder {
+  background-color: #afafaf;
+  border: 2px dashed #333;
+}

@@ -1,3 +1,5 @@
+@use 'import' as app;
+
 :host {
   display: block;
   padding-block-start: 64px;
@@ -5,15 +7,9 @@
 
 .stepper,
 .submitted {
-  display: grid;
-  gap: 16px;
-  max-inline-size: 480px;
   padding: 16px;
   margin-inline: auto;
-  border-radius: 24px;
-  corner-shape: squircle;
-  border: 1px solid hsl(0 0% 0% / 0.2);
-  overflow: clip;
+  @extend %card-view;
 }
 
 .step-count {

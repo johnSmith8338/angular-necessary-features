@@ -1,3 +1,5 @@
+@use 'import' as app;
+
 :host {
   display: block;
   padding-block-end: 64px;
@@ -9,12 +11,8 @@ p {
 }
 
 .content {
-  max-inline-size: 480px;
   margin-inline: auto;
-  border-radius: 24px;
-  corner-shape: squircle;
-  border: 1px solid hsl(0 0% 0% / 0.2);
-  overflow: clip;
+  @extend %card-view;
 }
 
 .header {

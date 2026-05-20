@@ -1,13 +1,9 @@
 @use 'sass:math';
+@use 'import' as app;
 
 :host {
-  display: grid;
-  gap: 16px;
-  max-inline-size: 480px;
   padding: 16px;
-  border-radius: 24px;
-  corner-shape: squircle;
-  border: 1px solid hsl(0 0% 0% / 0.2);
+  @extend %card-view;
 }
 
 .image-wrapper {

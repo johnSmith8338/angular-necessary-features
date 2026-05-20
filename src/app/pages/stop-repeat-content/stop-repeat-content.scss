@@ -1,13 +1,14 @@
+@use 'import' as app;
+
 :host {
   display: block;
   padding-block-start: 64px;
 }
 
 .content {
-  display: grid;
-  gap: 16px;
-  max-inline-size: 480px;
+  padding: 16px;
   margin-inline: auto;
+  @extend %card-view;
 }
 
 .button {

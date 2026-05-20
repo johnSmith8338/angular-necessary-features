@@ -7,6 +7,7 @@ import { DeferLoading } from './pages/defer-loading/defer-loading';
 import { SvgTemplate } from './pages/svg-template/svg-template';
 import { StopRepeatContent } from './pages/stop-repeat-content/stop-repeat-content';
 import { ClickOutsideTest } from './pages/click-outside-test/click-outside-test';
+import { DragDropList } from './pages/drag-drop-list/drag-drop-list';
 
 export const routes: Routes = [
     {
@@ -62,6 +63,14 @@ export const routes: Routes = [
         component: ClickOutsideTest,
         data: {
             title: 'click-outside',
+            showInMenu: true,
+        }
+    },
+    {
+        path: 'drag-drop-list',
+        component: DragDropList,
+        data: {
+            title: 'drag-drop',
             showInMenu: true,
         }
     },
