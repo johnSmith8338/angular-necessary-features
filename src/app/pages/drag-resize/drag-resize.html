@@ -1,0 +1,19 @@
+<app-drag-resize-sidebar>
+    <div slot-main>
+        <div class="header">
+            <h2>Title H2</h2>
+        </div>
+        @for (_ of content; track $index) {
+            <h3>Smaller title H3</h3>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet vel, magnam repudiandae ullam similique quaerat est porro, pariatur perferendis, sequi distinctio quibusdam? Tenetur harum nihil, repellendus, libero illum repudiandae neque ipsum, accusantium autem maiores voluptatibus officia officiis. Omnis, nemo eveniet?</p>
+        }
+    </div>
+    <div slot-sidebar>
+        <ul  class="sidebar">
+            <li><a href="#">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quae, placeat.</a></li>
+            <li><a href="#">Lorem ipsum dolor, sit amet consectetur adipisicing elit.</a></li>
+            <li><a href="#">Lorem ipsum dolor. Quae, placeat.</a></li>
+            <li><a href="#">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quae, placeat.</a></li>
+        </ul>
+    </div>
+</app-drag-resize-sidebar>
