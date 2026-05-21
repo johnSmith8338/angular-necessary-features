@@ -9,6 +9,7 @@ import { StopRepeatContent } from './pages/stop-repeat-content/stop-repeat-conte
 import { ClickOutsideTest } from './pages/click-outside-test/click-outside-test';
 import { DragDropList } from './pages/drag-drop-list/drag-drop-list';
 import { DragResize } from './pages/drag-resize/drag-resize';
+import { CdkModal } from './pages/cdk-modal/cdk-modal';
 
 export const routes: Routes = [
     {
@@ -80,6 +81,14 @@ export const routes: Routes = [
         component: DragResize,
         data: {
             title: 'drag-resize',
+            showInMenu: true,
+        }
+    },
+    {
+        path: 'cdk-modal',
+        component: CdkModal,
+        data: {
+            title: 'modal',
             showInMenu: true,
         }
     },

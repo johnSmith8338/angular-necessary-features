@@ -1,0 +1,16 @@
+<div class="header">
+    <h3>Sign Up</h3>
+    <em>It's totaly free! ;P</em>
+</div>
+<form class="body" [formGroup]="signUp">
+    <label for="name">
+        <span>Name:</span>
+        <input type="text" id="name" formControlName="name" placeholder="Name" />
+    </label>
+    <label for="email">
+        <span>Email:</span>
+        <input type="email" id="email" formControlName="email" placeholder="Email" />
+    </label>
+    <button type="submit" class="button">Submit</button>
+    <button class="button outline" (click)="closeModal()">Close</button>
+</form>

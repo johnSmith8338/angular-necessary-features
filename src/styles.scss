@@ -1,5 +1,7 @@
 /* You can add global styles to this file, and also import other style files */
 
+@use 'import' as app;
+
 @layer reset {
     html {
         interpolate-size: allow-keywords;
@@ -66,5 +68,12 @@
         &.danger {
             background-color: #bd0000;
         }
+    }
+
+    input {
+        height: 32px;
+        border-radius: 4px;
+        border: 1px solid hsl(0 0% 0% / 0.2);
+        padding-inline: 16px;
     }
 }
