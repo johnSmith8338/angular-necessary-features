@@ -10,6 +10,7 @@ import { ClickOutsideTest } from './pages/click-outside-test/click-outside-test'
 import { DragDropList } from './pages/drag-drop-list/drag-drop-list';
 import { DragResize } from './pages/drag-resize/drag-resize';
 import { CdkModal } from './pages/cdk-modal/cdk-modal';
+import { CopyToClipboard } from './pages/copy-to-clipboard/copy-to-clipboard';
 
 export const routes: Routes = [
     {
@@ -89,6 +90,14 @@ export const routes: Routes = [
         component: CdkModal,
         data: {
             title: 'modal',
+            showInMenu: true,
+        }
+    },
+    {
+        path: 'copy-to-clipboard',
+        component: CopyToClipboard,
+        data: {
+            title: 'copy',
             showInMenu: true,
         }
     },

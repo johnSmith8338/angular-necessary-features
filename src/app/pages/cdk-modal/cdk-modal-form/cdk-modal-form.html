@@ -2,14 +2,23 @@
     <h3>Sign Up</h3>
     <em>It's totaly free! ;P</em>
 </div>
-<form class="body" [formGroup]="signUp">
+<form class="body" [formGroup]="signUp" (ngSubmit)="submit()">
     <label for="name">
         <span>Name:</span>
         <input type="text" id="name" formControlName="name" placeholder="Name" />
+        @if (name.touched && name.invalid) {
+            <small class="error">Name is required</small>
+        }
     </label>
     <label for="email">
         <span>Email:</span>
         <input type="email" id="email" formControlName="email" placeholder="Email" />
+        @if (email.touched && email.errors?.['required']) {
+            <small class="error">Email is required</small>
+        }
+        @if (email.touched && email.errors?.['email']) {
+            <small class="error">Invalid email format</small>
+        }
     </label>
     <button type="submit" class="button">Submit</button>
     <button class="button outline" (click)="closeModal()">Close</button>

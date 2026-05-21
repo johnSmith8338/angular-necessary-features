@@ -22,10 +22,6 @@
 
 label {
   display: grid;
-  grid-auto-flow: column;
-  grid-template-columns: 48px 1fr;
-  gap: 4px;
-  align-items: center;
 }
 
 button {
@@ -34,4 +30,8 @@ button {
   &[type='submit'] {
     margin-block-start: 16px;
   }
+}
+
+.error {
+  color: #bd0000;
 }

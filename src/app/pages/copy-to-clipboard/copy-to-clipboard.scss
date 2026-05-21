@@ -1,0 +1,51 @@
+@use 'import' as app;
+
+:host {
+  display: block;
+  padding-block-start: 64px;
+}
+
+.content {
+  padding: 16px;
+  margin-inline: auto;
+  @extend %card-view;
+}
+
+.header {
+  padding-block-end: 16px;
+  border-bottom: 1px solid hsl(0 0% 0% / 0.2);
+  text-align: center;
+}
+
+.body {
+  display: grid;
+  gap: 24px;
+  padding-block-start: 16px;
+}
+
+.section {
+  display: grid;
+  gap: 16px;
+}
+
+.actions {
+  display: flex;
+  gap: 8px;
+}
+
+.list {
+  padding-block-start: 16px;
+  border-top: 1px solid hsl(0 0% 0% / 0.2);
+}
+
+.notification {
+  display: grid;
+  position: fixed;
+  inset: auto auto 48px;
+  padding: 16px;
+  background-color: #333;
+  color: #d8d8d8;
+  corner-shape: squircle;
+  border-radius: 16px;
+  border: 1px solid hsl(0 0% 0% / 0.2);
+}

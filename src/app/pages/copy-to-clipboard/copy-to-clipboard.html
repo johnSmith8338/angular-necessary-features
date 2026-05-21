@@ -1,0 +1,37 @@
+<div class="content">
+    <div class="header">
+        <h2>Random text generator</h2>
+        <em>Generates highly important enterprise content</em>
+    </div>
+    <div class="body">
+        <div class="section">
+            <input type="text" [ngModel]="generatedText()" placeholder="Generated text" readonly />
+            <div class="actions">
+                <button class="button" type="button" (click)="generateText()">Generate</button>
+                <button class="button outline" type="button" (click)="addGeneratedText()">Add to list</button>
+                <!-- to copy button we add what is need to be copied inour case 'generatedText' -->
+                <button 
+                    class="button opaque" 
+                    type="button" 
+                    [cdkCopyToClipboard]="generatedText()"
+                    (cdkCopyToClipboardCopied)="onCopied()">
+                    Copy text
+                </button>
+            </div>
+        </div>
+        <div class="section">
+            <textarea rows="5" placeholder="Write your text..." [ngModel]="customText()" (ngModelChange)="customText.set($event)"></textarea>
+            <button type="button" class="button" (click)="addCustomText()">Add to list</button>
+        </div>
+        <ul class="list">
+            @for (item of items(); track item; let i=$index) {
+                <li class="item">{{`${i}. ${item}`}}</li>
+            }
+        </ul>
+    </div>
+    @if (copied()) {
+        <div class="notification">
+            <p>Text copied successfully! （*＾-＾*）</p>
+        </div>
+    }
+</div>

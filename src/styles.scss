@@ -65,15 +65,34 @@
             color: #333;
         }
 
+        &.opaque {
+            background-color: transparent;
+            color: inherit;
+            border-color: transparent;
+        }
+
         &.danger {
             background-color: #bd0000;
         }
     }
 
-    input {
+    input:not([type='checkbox'], [type='radio']) {
         height: 32px;
-        border-radius: 4px;
+        corner-shape: squircle;
+        border-radius: 16px;
         border: 1px solid hsl(0 0% 0% / 0.2);
         padding-inline: 16px;
+        min-inline-size: 288px;
+        max-inline-size: 480px;
+    }
+
+    textarea {
+        corner-shape: squircle;
+        border-radius: 16px;
+        border: 1px solid hsl(0 0% 0% / 0.2);
+        padding: 16px;
+        min-inline-size: 288px;
+        max-inline-size: 480px;
+        box-sizing: border-box;
     }
 }

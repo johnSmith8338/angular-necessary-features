@@ -32,6 +32,31 @@ export class CdkModalForm {
     }),
   })
 
+  protected get name() {
+    return this.signUp.controls.name;
+  }
+  protected get email() {
+    return this.signUp.controls.email;
+  }
+
+  protected submit() {
+    if (this.signUp.invalid) {
+      this.signUp.markAllAsTouched();
+      return;
+    }
+
+    const { name, email } = this.signUp.getRawValue();
+
+    alert(`Name: ${name}\nEmail: ${email}`);
+
+    this.signUp.reset({
+      name: '',
+      email: '',
+    })
+
+    this.closeModal();
+  }
+
   protected closeModal() {
     this.dialogRef?.close();
   }
