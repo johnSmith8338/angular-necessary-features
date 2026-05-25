@@ -11,6 +11,7 @@ import { DragDropList } from './pages/drag-drop-list/drag-drop-list';
 import { DragResize } from './pages/drag-resize/drag-resize';
 import { CdkModal } from './pages/cdk-modal/cdk-modal';
 import { CopyToClipboard } from './pages/copy-to-clipboard/copy-to-clipboard';
+import { Accordion } from './pages/accordion/accordion';
 
 export const routes: Routes = [
     {
@@ -98,6 +99,14 @@ export const routes: Routes = [
         component: CopyToClipboard,
         data: {
             title: 'copy',
+            showInMenu: true,
+        }
+    },
+    {
+        path: 'accordion',
+        component: Accordion,
+        data: {
+            title: 'accordion',
             showInMenu: true,
         }
     },

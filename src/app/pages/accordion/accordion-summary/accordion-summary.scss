@@ -1,0 +1,23 @@
+:host {
+  display: grid;
+  grid-template-columns: 1fr max-content;
+  grid-template-areas:
+    'title btn'
+    'text btn'
+  ;
+  gap: 8px;
+  padding: 16px;
+  background-color: #d8d8d8;
+}
+
+h3 {
+  grid-area: title;
+}
+
+p {
+  grid-area: text;
+}
+
+button {
+  grid-area: btn;
+}

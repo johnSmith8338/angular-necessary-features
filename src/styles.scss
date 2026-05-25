@@ -71,6 +71,11 @@
             border-color: transparent;
         }
 
+        &.icon {
+            padding-inline: 8px;
+            inline-size: 40px;
+        }
+
         &.danger {
             background-color: #bd0000;
         }

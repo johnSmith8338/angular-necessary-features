@@ -1,0 +1,5 @@
+@if (item(); as item) {
+    <h2>{{item.title}}</h2>
+    <p>{{item.info}}</p>
+    <ng-content select="[slot-button]"></ng-content>
+}

@@ -33,12 +33,17 @@
   @extend %card-view;
 }
 
+.label.done {
+  text-decoration: line-through;
+  color: hsl(0 0% 20% / 0.4);
+}
+
 .checkbox {
   font-size: 24px;
 }
 
 .cdk-drag-preview {
-  scale: 0.7;
+  scale: 0.8;
   box-shadow: 0 8px 20px hsl(0 0% 0% / 0.2);
 }
 

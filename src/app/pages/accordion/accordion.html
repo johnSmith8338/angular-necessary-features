@@ -1,0 +1,18 @@
+<div class="content">
+    <cdk-accordion>
+        @for (item of items; track $index) {
+                <cdk-accordion-item #accordionItem="cdkAccordionItem">
+                    <app-accordion-summary [item]="item">
+                        <ng-container slot-button>
+                            <button class="button icon" (click)="accordionItem.toggle()">
+                                <span class="icon" [class.expanded]="accordionItem.expanded">▽</span>
+                            </button>
+                        </ng-container>
+                    </app-accordion-summary>
+                    <app-accordion-details [item]="item" [style.display]="accordionItem.expanded?'':'none'"></app-accordion-details>
+                </cdk-accordion-item>
+            }@empty {
+                <p>Sorry! No content for you</p>
+            }
+    </cdk-accordion>
+</div>
