@@ -11,7 +11,9 @@
 }
 
 .button.icon {
+
   .icon.expanded {
+    transition: rotate 0.3s ease;
     rotate: 180deg;
   }
 }

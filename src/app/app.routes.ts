@@ -12,6 +12,7 @@ import { DragResize } from './pages/drag-resize/drag-resize';
 import { CdkModal } from './pages/cdk-modal/cdk-modal';
 import { CopyToClipboard } from './pages/copy-to-clipboard/copy-to-clipboard';
 import { Accordion } from './pages/accordion/accordion';
+import { CssVariables } from './pages/css-variables/css-variables';
 
 export const routes: Routes = [
     {
@@ -107,6 +108,14 @@ export const routes: Routes = [
         component: Accordion,
         data: {
             title: 'accordion',
+            showInMenu: true,
+        }
+    },
+    {
+        path: 'css-variables',
+        component: CssVariables,
+        data: {
+            title: 'variables',
             showInMenu: true,
         }
     },

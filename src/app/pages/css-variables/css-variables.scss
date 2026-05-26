@@ -1,0 +1,36 @@
+@use 'import' as app;
+
+:host {
+  display: block;
+  padding-block-start: 64px;
+}
+
+h2 {
+  line-height: 1;
+}
+
+.content {
+  gap: 24px;
+  padding: 16px;
+  margin-inline: auto;
+  @extend %card-view;
+
+  &:not(:first-child) {
+    margin-block-start: 24px;
+  }
+}
+
+.grath {
+  display: flex;
+  gap: 16px;
+  justify-content: center;
+  align-items: flex-end;
+  border-bottom: 1px solid #333;
+}
+
+.grath-item {
+  display: grid;
+  justify-content: center;
+  inline-size: 48px;
+  block-size: calc(var(--height) * 1px);
+}

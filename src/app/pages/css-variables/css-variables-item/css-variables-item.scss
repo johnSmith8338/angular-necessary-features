@@ -1,0 +1,10 @@
+:host {
+  display: block;
+}
+
+.grath-item {
+  display: grid;
+  justify-content: center;
+  inline-size: 48px;
+  block-size: var(--height);
+}

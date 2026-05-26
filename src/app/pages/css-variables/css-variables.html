@@ -1,0 +1,28 @@
+<div class="content">
+    <h2>Custom property in template</h2>
+    <div class="grath">
+        @for (item of items(); track $index) {
+            <div class="grath-item" [style.backgroundColor]="item.bg" [style.color]="item.color" [style.--height]="item.count">
+                <span class="grath-title">{{item.count}}</span>
+            </div>
+        }
+    </div>
+</div>
+
+<div class="content">
+    <h2>Renderer2</h2>
+    <div class="grath">
+        @for (item of items(); track $index) {
+            <app-css-variables-item [item]="item"></app-css-variables-item>
+        }
+    </div>
+</div>
+
+<div class="content">
+    <h2>Custom property on host</h2>
+    <div class="grath">
+        @for (item of items(); track $index) {
+            <app-css-variables-host [item]="item"></app-css-variables-host>
+        }
+    </div>
+</div>
