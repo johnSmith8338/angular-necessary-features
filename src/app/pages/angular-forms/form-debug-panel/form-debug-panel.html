@@ -1,0 +1,29 @@
+<h3>Debug output</h3>
+<div class="debug-section">
+    <strong>Form value</strong>
+    <pre>{{formValue()|json}}</pre>
+</div>
+<div class="debug-section row">
+    <strong>Form valid:</strong>
+    <span [class.valid]="formValid()" [class.invalid]="!formValid()">{{formValid()}}</span>
+</div>
+<div class="debug-section row">
+    <strong>Form touched:</strong>
+    <span [class.valid]="formTouched()" [class.invalid]="!formTouched()">{{formTouched()}}</span>
+</div>
+<div class="debug-section row">
+    <strong>Form dirty:</strong>
+    <span [class.valid]="formDirty()" [class.invalid]="!formDirty()">{{formDirty()}}</span>
+</div>
+@if (hasControlErrors()) {
+    <div class="debug-section">
+        <strong>Controls errors</strong>
+        <pre>{{controlsErrors()|json}}</pre>
+    </div>
+}
+@if (formErrors()) {
+    <div class="debug-section">
+        <strong>Form errors</strong>
+        <pre>{{formErrors()|json}}</pre>
+    </div>
+}

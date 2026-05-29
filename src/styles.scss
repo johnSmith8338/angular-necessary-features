@@ -81,6 +81,11 @@
         }
     }
 
+    button[disabled] {
+        opacity: 0.6;
+        cursor: not-allowed;
+    }
+
     input:not([type='checkbox'], [type='radio']) {
         height: 32px;
         corner-shape: squircle;

@@ -1,0 +1,21 @@
+@use 'import' as app;
+
+:host {
+  padding: 16px;
+  @extend %card-view;
+}
+
+.debug-section {
+  &.row {
+    display: flex;
+    gap: 8px;
+  }
+}
+
+.valid {
+  color: forestgreen;
+}
+
+.invalid {
+  color: crimson;
+}

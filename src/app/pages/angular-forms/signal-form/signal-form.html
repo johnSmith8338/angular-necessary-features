@@ -1,0 +1,91 @@
+<div class="content">
+    <h2>Signal form + reactive forms = hybrid</h2>
+    <p>Using hybrid of ReactiveFormsModule and Signal forms</p>
+    <form [formGroup]="form" (submit)="onSubmit($event)">
+        <div class="form">
+            <h3>Account</h3>
+            <div class="group" formGroupName="account">
+                <label >
+                    <span>Name</span>
+                    <input type="text" formControlName="name" />
+                    @let nameControl=form.controls.account.controls.name;
+                    @if (nameControl.touched && nameControl.errors) {
+                        <span class="error">Name is required</span>
+                    }
+                </label>
+                <label >
+                    <span>Last name</span>
+                    <input type="text" formControlName="lastName" />
+                    @let lastNameControl=form.controls.account.controls.lastName;
+                    @if (lastNameControl.touched && lastNameControl.errors) {
+                        <span class="error">Last name is required</span>
+                    }
+                </label>
+            </div>
+        </div>
+
+        <div class="form">
+            <h3>Address</h3>
+            <div class="group" formGroupName="address">
+                <label >
+                    <span>Street</span>
+                    <input type="text" formControlName="street" />
+                    @let streetControl=form.controls.address.controls.street;
+                    @if (streetControl.touched && streetControl.errors) {
+                        <span class="error">Street is required</span>
+                    }
+                </label>
+
+                <div class="input-row">
+                    <label >
+                        <span>City</span>
+                        <input type="text" [formField]="city.fieldTree" />
+                        @let cityControl=city.fieldTree();
+                        @if (cityControl.touched() && cityControl.errors();as errors) {
+                            @for (error of errors; track error) {
+                                <span class="error">{{error.message}}</span>
+                            }
+                        }
+                    </label>
+                    <label >
+                        <span>State</span>
+                        <input type="text" [formField]="state.fieldTree" />
+                        @let stateControl=state.fieldTree();
+                        @if (stateControl.touched() && stateControl.errors();as errors) {
+                            @for (error of errors; track error) {
+                                <span class="error">{{error.message}}</span>
+                            }
+                        }
+                    </label>
+                    <label >
+                        <span>Zip</span>
+                        <input type="text" [formField]="zip.fieldTree" />
+                        @let zipControl=zip.fieldTree();
+                        @if (zipControl.touched() && zipControl.errors();as errors) {
+                            @for (error of errors; track error) {
+                                <span class="error">{{error.message}}</span>
+                            }
+                        }
+                    </label>
+                </div>
+            </div>
+        </div>
+
+        <div class="form">
+            <h3>Preferences</h3>
+            <div class="group" formGroupName="preferences">
+                <label class="checkbox-label">
+                    <input type="checkbox" formControlName="option" />
+                    <span>Receive marketing emails</span>
+                </label>
+            </div>
+        </div>
+
+        <div class="actions">
+            <button class="button" type="submit" [disabled]="!form.valid">Submit</button>
+        </div>
+    </form>
+</div>
+<div class="debug-wrapper">
+    <app-form-debug-panel [form]="form" />
+</div>

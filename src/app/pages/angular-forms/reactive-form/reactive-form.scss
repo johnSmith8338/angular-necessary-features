@@ -1,0 +1,44 @@
+@use 'import' as app;
+
+:host {
+  display: grid;
+  grid-auto-flow: column;
+  gap: 16px;
+
+  @media (width<=1024px) {
+    grid-auto-flow: row;
+  }
+}
+
+.content {
+  padding: 16px;
+  @extend %card-view;
+}
+
+form {
+  display: grid;
+  gap: 16px;
+}
+
+.form {
+  display: grid;
+  gap: 16px;
+}
+
+.group {
+  display: grid;
+  gap: 8px;
+}
+
+label:not(.checkbox-label) {
+  display: grid;
+}
+
+.checkbox-label {
+  display: flex;
+  gap: 4px;
+}
+
+.error {
+  @extend %error;
+}

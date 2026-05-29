@@ -16,3 +16,21 @@
     box-sizing: border-box;
     cursor: pointer;
 }
+
+%hide-scrollbar {
+    scrollbar-width: none;
+    /* Firefox 64 */
+    -ms-overflow-style: none;
+
+    /* IE 11 */
+    &::-webkit-scrollbar {
+        /** Webkit */
+        display: none;
+    }
+}
+
+%error {
+    font-size: 12px;
+    color: #9e2f2f;
+    line-height: 1;
+}

@@ -13,10 +13,22 @@ import { CdkModal } from './pages/cdk-modal/cdk-modal';
 import { CopyToClipboard } from './pages/copy-to-clipboard/copy-to-clipboard';
 import { Accordion } from './pages/accordion/accordion';
 import { CssVariables } from './pages/css-variables/css-variables';
+import { Home } from './pages/home/home';
+import { AngularForm } from './pages/angular-forms/angular-form/angular-form';
+import { ReactiveForm } from './pages/angular-forms/reactive-form/reactive-form';
+import { SignalFormHybrid } from './pages/angular-forms/signal-form/signal-form';
 
 export const routes: Routes = [
     {
         path: '',
+        component: Home,
+        data: {
+            title: 'home-page',
+            showInMenu: false,
+        }
+    },
+    {
+        path: 'show-more-button',
         component: ShowMore,
         data: {
             title: 'show-more',
@@ -118,6 +130,35 @@ export const routes: Routes = [
             title: 'variables',
             showInMenu: true,
         }
+    },
+    {
+        path: 'angular-forms',
+        component: AngularForm,
+        data: {
+            title: 'forms',
+            showInMenu: true,
+        },
+        children: [
+            {
+                path: '',
+                redirectTo: 'reactive-form',
+                pathMatch: 'full'
+            },
+            {
+                path: 'reactive-form',
+                component: ReactiveForm,
+                data: {
+                    title: 'reactive-form',
+                },
+            },
+            {
+                path: 'signal-form-hybrid',
+                component: SignalFormHybrid,
+                data: {
+                    title: 'form-hybrid',
+                },
+            }
+        ]
     },
     {
         path: '**',

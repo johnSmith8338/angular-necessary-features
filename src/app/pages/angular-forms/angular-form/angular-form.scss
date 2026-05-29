@@ -1,0 +1,15 @@
+@use 'import' as app;
+
+:host {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+  padding-block-start: 64px;
+}
+
+nav {
+  padding: 16px;
+  max-inline-size: fit-content;
+  align-items: start;
+  @extend %card-view;
+}

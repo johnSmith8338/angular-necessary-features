@@ -1,0 +1,14 @@
+@use 'import' as app;
+
+:host {
+  display: block;
+  padding-block-start: 64px;
+}
+
+.content {
+  max-inline-size: 480px;
+  margin-inline: auto;
+  text-align: center;
+  display: grid;
+  gap: 16px;
+}
