@@ -1,0 +1,24 @@
+<div class="content">
+    <h2>Signal form with async validation</h2>
+    <p>Using "ignoreValidators" in submission option</p>
+    <p>For testing unavailable names: 'admin', 'test'</p>
+    <form [formRoot]="form">
+        <div class="field">
+            <label for="userName"></label>
+            <input type="text" id="userName" [formField]="form.userName" />
+            @if(form.userName().pending()){
+                <span class="info">Checking availiability...</span>
+            }
+            @if (form.userName().touched() && form.userName().invalid()) {
+                @for (error of form.userName().errors(); track $index) {
+                    <span class="error">{{error.message}}</span>
+                }
+            }
+        </div>
+        <div class="actions">
+            <button type="submit" class="button" [disabled]="form().submitting()">
+                <span>{{form().submitting()?'Saving...':'Save'}}</span>
+            </button>
+        </div>
+    </form>
+</div>

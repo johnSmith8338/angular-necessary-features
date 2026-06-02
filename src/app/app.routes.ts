@@ -16,7 +16,8 @@ import { CssVariables } from './pages/css-variables/css-variables';
 import { Home } from './pages/home/home';
 import { AngularForm } from './pages/angular-forms/angular-form/angular-form';
 import { ReactiveForm } from './pages/angular-forms/reactive-form/reactive-form';
-import { SignalFormHybrid } from './pages/angular-forms/signal-form/signal-form';
+import { SignalFormHybrid } from './pages/angular-forms/signal-form-hybrid/signal-form-hybrid';
+import { SignalFormAsyncValidation } from './pages/angular-forms/signal-form-async-validation/signal-form-async-validation';
 
 export const routes: Routes = [
     {
@@ -156,6 +157,13 @@ export const routes: Routes = [
                 component: SignalFormHybrid,
                 data: {
                     title: 'form-hybrid',
+                },
+            },
+            {
+                path: 'signal-form-asyc-validation',
+                component: SignalFormAsyncValidation,
+                data: {
+                    title: 'asyc-validation',
                 },
             }
         ]

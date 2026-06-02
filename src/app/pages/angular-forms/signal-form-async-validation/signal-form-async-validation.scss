@@ -1,0 +1,30 @@
+@use 'import' as app;
+
+:host {
+  display: block;
+}
+
+.content {
+  display: grid;
+  gap: 16px;
+  padding: 16px;
+  @extend %card-view;
+}
+
+form {
+  display: grid;
+  gap: 16px;
+}
+
+.field {
+  display: grid;
+}
+
+.info {
+  font-size: 12px;
+  color: darkorange;
+}
+
+.error {
+  @extend %error;
+}

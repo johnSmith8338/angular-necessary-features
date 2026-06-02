@@ -25,8 +25,8 @@ interface ProfileForm {
 @Component({
   selector: 'app-signal-form',
   imports: [FormDebugPanel, ReactiveFormsModule, FormField],
-  templateUrl: './signal-form.html',
-  styleUrl: './signal-form.scss',
+  templateUrl: './signal-form-hybrid.html',
+  styleUrl: './signal-form-hybrid.scss',
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class SignalFormHybrid {
@@ -74,5 +74,9 @@ export class SignalFormHybrid {
       const formValue = this.form.getRawValue();
       alert(`Form submited`);
     }
+  }
+
+  protected onReset() {
+    this.form.reset();
   }
 }

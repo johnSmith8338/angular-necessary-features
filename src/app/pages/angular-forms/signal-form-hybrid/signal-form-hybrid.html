@@ -68,6 +68,7 @@
                         }
                     </label>
                 </div>
+                <em [style.fontSize.px]="14">⇱ SignalFormControl used to add this three fields ⇱</em>
             </div>
         </div>
 
@@ -83,6 +84,7 @@
 
         <div class="actions">
             <button class="button" type="submit" [disabled]="!form.valid">Submit</button>
+            <button class="button outline" type="button" (click)="onReset()">Reset</button>
         </div>
     </form>
 </div>
