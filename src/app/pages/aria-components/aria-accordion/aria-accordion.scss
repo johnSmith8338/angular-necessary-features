@@ -1,0 +1,51 @@
+:host {
+  display: block;
+}
+
+.accordion {
+  display: grid;
+  gap: 8px;
+}
+
+.accordion-item {
+  display: grid;
+  gap: 8px;
+  padding-block: 8px;
+
+  &:not(:last-child) {
+    border-bottom: 1px solid #d8d8d8;
+  }
+}
+
+.accordion-title {
+  display: flex;
+  gap: 16px;
+  justify-content: space-between;
+  line-height: 1;
+  cursor: pointer;
+}
+
+.icon {
+  &.expanded {
+    .dash:last-child {
+      rotate: 0deg;
+    }
+  }
+}
+
+.dash {
+  display: grid;
+  block-size: 2px;
+  inline-size: 16px;
+  background-color: #333;
+  transition: rotate 0.2s;
+
+  &:first-child {
+    translate: 0px 8px;
+  }
+
+  &:last-child {
+    rotate: 90deg;
+    translate: 0px 6px;
+  }
+}

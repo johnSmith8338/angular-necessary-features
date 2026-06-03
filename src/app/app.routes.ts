@@ -18,6 +18,8 @@ import { AngularForm } from './pages/angular-forms/angular-form/angular-form';
 import { ReactiveForm } from './pages/angular-forms/reactive-form/reactive-form';
 import { SignalFormHybrid } from './pages/angular-forms/signal-form-hybrid/signal-form-hybrid';
 import { SignalFormAsyncValidation } from './pages/angular-forms/signal-form-async-validation/signal-form-async-validation';
+import { Aria } from './pages/aria-components/aria/aria';
+import { AriaAccordion } from './pages/aria-components/aria-accordion/aria-accordion';
 
 export const routes: Routes = [
     {
@@ -164,6 +166,28 @@ export const routes: Routes = [
                 component: SignalFormAsyncValidation,
                 data: {
                     title: 'asyc-validation',
+                },
+            }
+        ]
+    },
+    {
+        path: 'aria-components',
+        component: Aria,
+        data: {
+            title: 'aria-components',
+            showInMenu: false,
+        },
+        children: [
+            {
+                path: '',
+                redirectTo: 'aria-accordion',
+                pathMatch: 'full'
+            },
+            {
+                path: 'aria-accordion',
+                component: AriaAccordion,
+                data: {
+                    title: 'accordion',
                 },
             }
         ]

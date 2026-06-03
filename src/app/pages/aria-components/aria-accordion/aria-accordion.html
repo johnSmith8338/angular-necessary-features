@@ -1,0 +1,24 @@
+<div class="accordion" ngAccordionGroup [multiExpandable]="false">
+    @for (item of accordionItems(); track $index) {
+        <div class="accordion-item">
+            <h3 class="accordion-title">
+                <span ngAccordionTrigger
+                    [panel]="panel"
+                    #trigger="ngAccordionTrigger"
+                    [expanded]="$first">
+                    {{item.title}}
+                </span>
+                <span class="icon" [class.expanded]="trigger.expanded()" aria-hidden="true">
+                    @for (_ of [].constructor(2); track $index) {
+                        <span class="dash"></span>
+                    }
+                </span>
+            </h3>
+            <div class="accordion-content" ngAccordionPanel #panel="ngAccordionPanel">
+                <ng-template ngAccordionContent>
+                    <p>{{item.text}}</p>
+                </ng-template>
+            </div>
+        </div>
+    }
+</div>

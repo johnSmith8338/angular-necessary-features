@@ -2,6 +2,7 @@
   <h2>
     <a [routerLink]="'/'">test project</a>
   </h2>
+  <a [routerLink]="['aria-components']" class="button aria">Aria</a>
   <button class="menu-button" (click)="toggleMenu()">
     @for (_ of [].constructor(3); track $index) {
       <span class="dash"></span>

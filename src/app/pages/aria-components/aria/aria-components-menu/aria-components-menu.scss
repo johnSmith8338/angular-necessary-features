@@ -1,0 +1,26 @@
+@use 'import' as app;
+
+:host {
+  display: grid;
+  gap: 8px;
+  @extend %hide-scrollbar;
+
+  @media (width<=1024px) {
+    grid-auto-flow: column;
+    overflow-y: auto;
+    scroll-snap-type: x mandatory;
+  }
+}
+
+.button {
+  color: #b5b5b5;
+  width: max-content;
+
+  &.active {
+    color: #fff;
+  }
+
+  @media (width<=1024px) {
+    scroll-snap-align: start;
+  }
+}
