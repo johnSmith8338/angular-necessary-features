@@ -1,0 +1,9 @@
+<div class="avatar">
+    <img [src]="user().avatar" alt="">
+</div>
+<h3>{{user().firstName}} {{user().lastName}}</h3>
+<p>{{user().profession}}</p>
+<p class="location">{{user().address.city}}</p>
+<p class="skills">
+    <small>{{user().skills.join(', ')}}</small>
+</p>

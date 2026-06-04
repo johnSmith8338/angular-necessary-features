@@ -1,0 +1,39 @@
+<div ngCombobox filterMode="auto-select">
+    <div #origin class="search-field">
+        <input ngComboboxInput [(value)]="search" placeholder="Search user..." />
+        @if(search()){
+            <button type="button" class="button icon" (click)="clearSearch()" aria-label="clear search">✕</button>
+        }
+    </div>
+    <ng-template ngComboboxPopupContainer >
+        <ng-template 
+            [cdkConnectedOverlay]="{origin,usePopover:'inline',matchWidth:true}"
+            [cdkConnectedOverlayOpen]="true">
+            <div class="popup">
+                @if (users()?.length===0) {
+                    <div class="no-result">
+                        <span>No result found</span>
+                    </div>
+                }
+                <div ngListbox>
+                    @for (result of filteredUsers(); track result.user.id) {
+                        <div ngOption [value]="result.user" [label]="`${result.user.firstName}`">
+                            <span class="main-info">
+                                <span>{{result.user.firstName}} {{result.user.lastName}}</span>
+                                <span class="check-icon" aria-hidden="true">✓</span>
+                            </span>
+                            <small>{{result.matches.join(', ')}}</small>
+                        </div>
+                    }
+                </div>
+            </div>
+        </ng-template>
+    </ng-template>
+    
+    <div class="users">
+        @for (user of filteredUsers(); track user.user.id) {
+            <app-user-card [user]="user.user" />
+        }
+    </div>
+</div>
+

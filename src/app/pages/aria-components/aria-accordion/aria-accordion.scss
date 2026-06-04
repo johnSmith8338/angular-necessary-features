@@ -22,7 +22,6 @@
   gap: 16px;
   justify-content: space-between;
   line-height: 1;
-  cursor: pointer;
 }
 
 .icon {
@@ -48,4 +47,18 @@
     rotate: 90deg;
     translate: 0px 6px;
   }
+}
+
+[ngAccordionTrigger] {
+  color: #727272;
+  cursor: pointer;
+}
+
+[ngAccordionTrigger][aria-expanded='true'] {
+  color: #333;
+}
+
+[ngAccordionTrigger][aria-disabled='true'] {
+  opacity: 0.4;
+  cursor: not-allowed;
 }

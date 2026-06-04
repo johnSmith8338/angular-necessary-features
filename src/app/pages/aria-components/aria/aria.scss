@@ -16,5 +16,11 @@ nav {
 
 .content {
   padding: 16px;
+  width: 100%;
+  max-inline-size: 100%;
   @extend %card-view;
+
+  @media (width<=1024px) {
+    max-inline-size: 100%;
+  }
 }

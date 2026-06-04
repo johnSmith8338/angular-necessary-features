@@ -5,7 +5,8 @@
                 <span ngAccordionTrigger
                     [panel]="panel"
                     #trigger="ngAccordionTrigger"
-                    [expanded]="$first">
+                    [expanded]="$first"
+                    [disabled]="$last">
                     {{item.title}}
                 </span>
                 <span class="icon" [class.expanded]="trigger.expanded()" aria-hidden="true">

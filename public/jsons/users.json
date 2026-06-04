@@ -1,0 +1,386 @@
+[
+    {
+        "id": 1,
+        "avatar": "svg/user.svg",
+        "firstName": "John",
+        "lastName": "Smith",
+        "age": 31,
+        "profession": "Frontend Developer",
+        "email": "john.smith@example.com",
+        "address": {
+            "state": "California",
+            "city": "Los Angeles",
+            "street": "145 Sunset Blvd",
+            "zip": "90001"
+        },
+        "skills": [
+            "Angular",
+            "TypeScript",
+            "RxJS"
+        ]
+    },
+    {
+        "id": 2,
+        "avatar": "svg/user.svg",
+        "firstName": "Emma",
+        "lastName": "Wilson",
+        "age": 28,
+        "profession": "UX Designer",
+        "email": "emma.wilson@example.com",
+        "address": {
+            "state": "Berlin",
+            "city": "Berlin",
+            "street": "22 Alexanderplatz",
+            "zip": "10178"
+        },
+        "skills": [
+            "Figma",
+            "Design Systems"
+        ]
+    },
+    {
+        "id": 3,
+        "avatar": "svg/user.svg",
+        "firstName": "Michael",
+        "lastName": "Brown",
+        "age": 35,
+        "profession": "Backend Developer",
+        "email": "michael.brown@example.com",
+        "address": {
+            "state": "Mazowieckie",
+            "city": "Warsaw",
+            "street": "17 Marszalkowska",
+            "zip": "00-001"
+        },
+        "skills": [
+            "NestJS",
+            "Node.js",
+            "PostgreSQL"
+        ]
+    },
+    {
+        "id": 4,
+        "avatar": "svg/user.svg",
+        "firstName": "Sophia",
+        "lastName": "Miller",
+        "age": 26,
+        "profession": "QA Engineer",
+        "email": "sophia.miller@example.com",
+        "address": {
+            "state": "Prague",
+            "city": "Prague",
+            "street": "7 Charles Street",
+            "zip": "11000"
+        },
+        "skills": [
+            "Playwright",
+            "Cypress"
+        ]
+    },
+    {
+        "id": 5,
+        "avatar": "svg/user.svg",
+        "firstName": "David",
+        "lastName": "Taylor",
+        "age": 40,
+        "profession": "Solution Architect",
+        "email": "david.taylor@example.com",
+        "address": {
+            "state": "North Holland",
+            "city": "Amsterdam",
+            "street": "58 Damrak",
+            "zip": "1012"
+        },
+        "skills": [
+            "Azure",
+            "Microservices"
+        ]
+    },
+    {
+        "id": 6,
+        "avatar": "svg/user.svg",
+        "firstName": "Olivia",
+        "lastName": "Johnson",
+        "age": 30,
+        "profession": "Product Manager",
+        "email": "olivia.johnson@example.com",
+        "address": {
+            "state": "Texas",
+            "city": "Austin",
+            "street": "14 Congress Ave",
+            "zip": "78701"
+        },
+        "skills": [
+            "Agile",
+            "Scrum"
+        ]
+    },
+    {
+        "id": 7,
+        "avatar": "svg/user.svg",
+        "firstName": "William",
+        "lastName": "Anderson",
+        "age": 38,
+        "profession": "DevOps Engineer",
+        "email": "william.anderson@example.com",
+        "address": {
+            "state": "Washington",
+            "city": "Seattle",
+            "street": "101 Pine Street",
+            "zip": "98101"
+        },
+        "skills": [
+            "Docker",
+            "Kubernetes",
+            "AWS"
+        ]
+    },
+    {
+        "id": 8,
+        "avatar": "svg/user.svg",
+        "firstName": "Ava",
+        "lastName": "Thomas",
+        "age": 29,
+        "profession": "Data Analyst",
+        "email": "ava.thomas@example.com",
+        "address": {
+            "state": "Ontario",
+            "city": "Toronto",
+            "street": "55 King Street",
+            "zip": "M5H1A1"
+        },
+        "skills": [
+            "Power BI",
+            "SQL"
+        ]
+    },
+    {
+        "id": 9,
+        "avatar": "svg/user.svg",
+        "firstName": "James",
+        "lastName": "Moore",
+        "age": 34,
+        "profession": "Mobile Developer",
+        "email": "james.moore@example.com",
+        "address": {
+            "state": "Florida",
+            "city": "Miami",
+            "street": "88 Ocean Drive",
+            "zip": "33139"
+        },
+        "skills": [
+            "Flutter",
+            "Dart"
+        ]
+    },
+    {
+        "id": 10,
+        "avatar": "svg/user.svg",
+        "firstName": "Charlotte",
+        "lastName": "Martin",
+        "age": 27,
+        "profession": "Business Analyst",
+        "email": "charlotte.martin@example.com",
+        "address": {
+            "state": "Illinois",
+            "city": "Chicago",
+            "street": "210 Lake Shore Dr",
+            "zip": "60601"
+        },
+        "skills": [
+            "Jira",
+            "Confluence"
+        ]
+    },
+    {
+        "id": 11,
+        "avatar": "svg/user.svg",
+        "firstName": "Benjamin",
+        "lastName": "White",
+        "age": 36,
+        "profession": "Security Engineer",
+        "email": "benjamin.white@example.com",
+        "address": {
+            "state": "Virginia",
+            "city": "Richmond",
+            "street": "42 Main Street",
+            "zip": "23219"
+        },
+        "skills": [
+            "OWASP",
+            "Pentesting"
+        ]
+    },
+    {
+        "id": 12,
+        "avatar": "svg/user.svg",
+        "firstName": "Mia",
+        "lastName": "Harris",
+        "age": 24,
+        "profession": "Frontend Developer",
+        "email": "mia.harris@example.com",
+        "address": {
+            "state": "Colorado",
+            "city": "Denver",
+            "street": "12 Market Street",
+            "zip": "80202"
+        },
+        "skills": [
+            "Angular",
+            "SCSS"
+        ]
+    },
+    {
+        "id": 13,
+        "avatar": "svg/user.svg",
+        "firstName": "Lucas",
+        "lastName": "Clark",
+        "age": 33,
+        "profession": "Cloud Engineer",
+        "email": "lucas.clark@example.com",
+        "address": {
+            "state": "Arizona",
+            "city": "Phoenix",
+            "street": "78 Camelback Rd",
+            "zip": "85001"
+        },
+        "skills": [
+            "AWS",
+            "Terraform"
+        ]
+    },
+    {
+        "id": 14,
+        "avatar": "svg/user.svg",
+        "firstName": "Amelia",
+        "lastName": "Lewis",
+        "age": 31,
+        "profession": "Technical Writer",
+        "email": "amelia.lewis@example.com",
+        "address": {
+            "state": "Nevada",
+            "city": "Las Vegas",
+            "street": "9 Fremont Street",
+            "zip": "89101"
+        },
+        "skills": [
+            "Documentation",
+            "Markdown"
+        ]
+    },
+    {
+        "id": 15,
+        "avatar": "svg/user.svg",
+        "firstName": "Henry",
+        "lastName": "Walker",
+        "age": 41,
+        "profession": "Engineering Manager",
+        "email": "henry.walker@example.com",
+        "address": {
+            "state": "New York",
+            "city": "New York",
+            "street": "450 Madison Ave",
+            "zip": "10022"
+        },
+        "skills": [
+            "Leadership",
+            "Architecture"
+        ]
+    },
+    {
+        "id": 16,
+        "avatar": "svg/user.svg",
+        "firstName": "Evelyn",
+        "lastName": "Hall",
+        "age": 29,
+        "profession": "UI Designer",
+        "email": "evelyn.hall@example.com",
+        "address": {
+            "state": "Oregon",
+            "city": "Portland",
+            "street": "34 Burnside St",
+            "zip": "97209"
+        },
+        "skills": [
+            "Figma",
+            "Illustrator"
+        ]
+    },
+    {
+        "id": 17,
+        "avatar": "svg/user.svg",
+        "firstName": "Alexander",
+        "lastName": "Allen",
+        "age": 37,
+        "profession": "Data Engineer",
+        "email": "alexander.allen@example.com",
+        "address": {
+            "state": "Georgia",
+            "city": "Atlanta",
+            "street": "66 Peachtree St",
+            "zip": "30303"
+        },
+        "skills": [
+            "Spark",
+            "Kafka"
+        ]
+    },
+    {
+        "id": 18,
+        "avatar": "svg/user.svg",
+        "firstName": "Harper",
+        "lastName": "Young",
+        "age": 25,
+        "profession": "QA Automation Engineer",
+        "email": "harper.young@example.com",
+        "address": {
+            "state": "Utah",
+            "city": "Salt Lake City",
+            "street": "19 Temple St",
+            "zip": "84101"
+        },
+        "skills": [
+            "Playwright",
+            "TypeScript"
+        ]
+    },
+    {
+        "id": 19,
+        "avatar": "svg/user.svg",
+        "firstName": "Daniel",
+        "lastName": "King",
+        "age": 32,
+        "profession": "Full Stack Developer",
+        "email": "daniel.king@example.com",
+        "address": {
+            "state": "Ohio",
+            "city": "Columbus",
+            "street": "123 High Street",
+            "zip": "43215"
+        },
+        "skills": [
+            "Angular",
+            "NestJS",
+            "MongoDB"
+        ]
+    },
+    {
+        "id": 20,
+        "avatar": "svg/user.svg",
+        "firstName": "Ella",
+        "lastName": "Scott",
+        "age": 27,
+        "profession": "Project Manager",
+        "email": "ella.scott@example.com",
+        "address": {
+            "state": "North Carolina",
+            "city": "Charlotte",
+            "street": "77 Trade Street",
+            "zip": "28202"
+        },
+        "skills": [
+            "Planning",
+            "Kanban"
+        ]
+    }
+]

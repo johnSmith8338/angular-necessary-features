@@ -20,6 +20,7 @@ import { SignalFormHybrid } from './pages/angular-forms/signal-form-hybrid/signa
 import { SignalFormAsyncValidation } from './pages/angular-forms/signal-form-async-validation/signal-form-async-validation';
 import { Aria } from './pages/aria-components/aria/aria';
 import { AriaAccordion } from './pages/aria-components/aria-accordion/aria-accordion';
+import { AriaCombobox } from './pages/aria-components/aria-combobox/aria-combobox';
 
 export const routes: Routes = [
     {
@@ -188,6 +189,13 @@ export const routes: Routes = [
                 component: AriaAccordion,
                 data: {
                     title: 'accordion',
+                },
+            },
+            {
+                path: 'aria-combobox',
+                component: AriaCombobox,
+                data: {
+                    title: 'combobox',
                 },
             }
         ]

@@ -4,12 +4,9 @@
   display: grid;
   gap: 8px;
   @extend %hide-scrollbar;
-
-  @media (width<=1024px) {
-    grid-auto-flow: column;
-    overflow-y: auto;
-    scroll-snap-type: x mandatory;
-  }
+  grid-auto-flow: column;
+  overflow-y: auto;
+  scroll-snap-type: x mandatory;
 }
 
 .button {

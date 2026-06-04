@@ -1,0 +1,62 @@
+:host {
+  display: block;
+}
+
+div[ngCombobox] {
+  display: grid;
+  gap: 16px;
+}
+
+.search-field {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+}
+
+[ngCombobox]:has([aria-expanded='false']) .popup {
+  display: none;
+}
+
+.popup {
+  display: grid;
+  inline-size: 100%;
+  max-inline-size: 480px;
+  max-block-size: 300px;
+  background-color: #d8d8d8;
+  border-radius: 16px;
+  corner-shape: squircle;
+  overflow-y: auto;
+}
+
+[ngOption] {
+  display: grid;
+  align-items: center;
+  padding-block: 8px;
+  padding-inline: 16px;
+  cursor: pointer;
+
+  small {
+    color: #888888;
+  }
+}
+
+.main-info {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+[ngOption]:hover {
+  background-color: #333;
+  color: #d8d8d8;
+}
+
+[ngOption]:not([aria-selected='true']) .check-icon {
+  display: none;
+}
+
+.users {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 16px;
+}
