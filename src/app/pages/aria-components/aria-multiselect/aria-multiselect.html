@@ -1,0 +1,45 @@
+<div ngCombobox readonly>
+    <div #origin class="select">
+        <span class="combobox-label">
+            <span class="selected-label-text">{{displayValue()}}</span>
+        </span>
+        <input ngComboboxInput placeholder="Select user" aria-label="label dropdown" />
+        <span class="triangle-icon">▼</span>
+        @if(selectedUsers().length){
+            <button type="button" class="button icon" (click)="clearSelection()" aria-label="clear selection">✕</button>
+        }
+    </div>
+    <ng-template ngComboboxPopupContainer >
+        <ng-template
+            [cdkConnectedOverlay]="{origin, usePopover:'inline',matchWidth:true}"
+            [cdkConnectedOverlayOpen]="true">
+            <div class="popup-container">
+                <div ngListbox multi>
+                    @for (user of users(); track user.id) {
+                        <div ngOption [value]="user.id" [label]="user.firstName">
+                            <span class="option-text">{{user.firstName}}</span>
+                            <span class="check-icon" aria-hidden="true" translate="no">✓</span>
+                        </div>
+                    }
+                </div>
+            </div>
+        </ng-template>
+    </ng-template>
+</div>
+<div class="selected-chips">
+    @for (user of selectedUsers(); track user.id) {
+        <button class="chip button" (click)="removeUser(user.id)" aria-label="remove user">
+            <span>{{user.firstName}}</span>
+            <span>✕</span>
+        </button>
+    }
+</div>
+<div class="selected-users">
+    @if (selectedUsers().length) {
+        @for (user of selectedUsers(); track user.id) {
+            <app-user-card [user]="user" />
+        }
+    }@else {
+        <p>No users selected</p>
+    }
+</div>

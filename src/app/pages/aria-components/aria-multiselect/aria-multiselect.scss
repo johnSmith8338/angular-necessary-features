@@ -1,0 +1,114 @@
+:host {
+  display: grid;
+  gap: 16px;
+}
+
+.select {
+  display: flex;
+  align-items: center;
+  position: relative;
+  height: 44px;
+  corner-shape: squircle;
+  border-radius: 16px;
+  border: 1px solid hsl(0 0% 0% / 0.2);
+  padding-inline: 16px;
+  min-inline-size: 288px;
+  max-inline-size: 480px;
+}
+
+.select:has([ngComboboxInput][aria-disabled='true']) {
+  opacity: 0.6;
+  cursor: default;
+}
+
+[ngComboboxInput] {
+  opacity: 0;
+  inline-size: 100%;
+  min-inline-size: 288px;
+  max-inline-size: 480px;
+  cursor: pointer;
+}
+
+[ngCombobox]:focus-within .select {
+  outline: 1px solid #b9b9b9;
+}
+
+.combobox-label {
+  position: absolute;
+  display: grid;
+  align-items: center;
+  pointer-events: none;
+}
+
+.triangle-icon {
+  position: absolute;
+  right: 16px;
+  pointer-events: none;
+  transition: rotate 0.2s ease-in-out;
+}
+
+[aria-label="clear selection"] {
+  position: absolute;
+  right: 2px;
+}
+
+[ngComboboxInput][aria-expanded='true']~.triangle-icon {
+  rotate: 180deg;
+}
+
+.popup-container {
+  display: grid;
+  inline-size: 100%;
+  max-inline-size: 480px;
+  max-block-size: 300px;
+  background-color: #d8d8d8;
+  border-radius: 16px;
+  corner-shape: squircle;
+  overflow-y: auto;
+  opacity: 1;
+  visibility: visible;
+  transition: max-block-size 0.2s ease-out, visibility 0s, opacity 25ms ease-out;
+}
+
+[ngCombobox]:has([ngComboboxInput][aria-expanded='false']) .popup-container {
+  max-block-size: 0;
+  opacity: 0;
+  visibility: hidden;
+  transition: max-block-size 0.2s ease-in, visibility 0s 0.2s, opacity 0.2ms ease-in;
+}
+
+[ngOption] {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-block: 8px;
+  padding-inline: 16px;
+  cursor: pointer;
+}
+
+[ngOption][aria-selected='true'] {
+  background-color: #333;
+  color: #d8d8d8;
+}
+
+[ngOption]:not([aria-selected='true']) .check-icon {
+  display: none;
+}
+
+.selected-chips {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.chip {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.selected-users {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 16px;
+}

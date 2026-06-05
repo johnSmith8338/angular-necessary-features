@@ -22,6 +22,7 @@ import { Aria } from './pages/aria-components/aria/aria';
 import { AriaAccordion } from './pages/aria-components/aria-accordion/aria-accordion';
 import { AriaCombobox } from './pages/aria-components/aria-combobox/aria-combobox';
 import { AriaListbox } from './pages/aria-components/aria-listbox/aria-listbox';
+import { AriaMultiselect } from './pages/aria-components/aria-multiselect/aria-multiselect';
 
 export const routes: Routes = [
     {
@@ -204,6 +205,13 @@ export const routes: Routes = [
                 component: AriaListbox,
                 data: {
                     title: 'listbox',
+                },
+            },
+            {
+                path: 'aria-multiselect',
+                component: AriaMultiselect,
+                data: {
+                    title: 'multiselect',
                 },
             }
         ]
