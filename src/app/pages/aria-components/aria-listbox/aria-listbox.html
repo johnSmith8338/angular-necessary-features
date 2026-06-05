@@ -1,0 +1,22 @@
+<div class="content-wrapper flex">
+    <div class="listbox-container">
+        <div ngListbox>
+            @for (user of users(); track user.id){
+                <div ngOption [value]="user">
+                    <span class="option-text">{{user.firstName}}</span>
+                    <span class="check-icon" aria-hidden="true">✓</span>
+                </div>
+            }
+        </div>
+    </div>
+    <div class="content">
+        @if (selectedUser(); as user) {
+            <app-user-card [user]="user" />
+        }@else {
+            <p>Select user...</p>
+        }
+    </div>
+</div>
+<div class="content-wrapper grid">
+    <app-aria-listbox-horizontal-multi />
+</div>

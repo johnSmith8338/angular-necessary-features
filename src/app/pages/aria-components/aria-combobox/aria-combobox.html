@@ -1,4 +1,8 @@
 <div ngCombobox filterMode="auto-select">
+    <div class="card-header">
+        <h2>Search field using combobox</h2>
+        <p>You can search user by firstName, lastName, location, skills.</p>
+    </div>
     <div #origin class="search-field">
         <input ngComboboxInput [(value)]="search" placeholder="Search user..." />
         @if(search()){

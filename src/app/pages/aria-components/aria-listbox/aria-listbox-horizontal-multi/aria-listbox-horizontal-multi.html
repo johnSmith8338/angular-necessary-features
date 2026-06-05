@@ -1,0 +1,20 @@
+<label class="toggle">
+        <span>{{`Multi selection (${isMulti()}):`}}</span>
+        <input type="checkbox" [checked]="isMulti()===true" (change)="toggleSelectionMode()" />
+    </label>
+<div ngListbox aria-label="user-select" orientation="horizontal" selectionMode="explicit" [multi]="isMulti()">
+    @for (user of users(); track user.id) {
+        <div ngOption [value]="user" [label]="user.firstName">
+            <span class="option-label button outline">{{user.firstName}}</span>
+        </div>
+    }
+</div>
+<div class="content">
+    @if (selectedUser().length) {
+        @for (user of selectedUser(); track user.id) {
+            <app-user-card [user]="user" />
+        }
+    }@else {
+        <p>Select user...</p>
+    }
+</div>

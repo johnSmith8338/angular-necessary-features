@@ -8,7 +8,10 @@ import { User } from '../models/user.interface';
 export class UserSvc {
   private http = inject(HttpClient);
 
-  readonly userResource = httpResource<User[]>(() => 'jsons/users.json');
+  readonly userResource = httpResource<User[]>(() => ({
+    url: 'jsons/users.json',
+    method: 'GET'
+  }));
 
   readonly users = this.userResource.value;
   readonly loading = this.userResource.isLoading;

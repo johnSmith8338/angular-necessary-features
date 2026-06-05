@@ -21,6 +21,7 @@ import { SignalFormAsyncValidation } from './pages/angular-forms/signal-form-asy
 import { Aria } from './pages/aria-components/aria/aria';
 import { AriaAccordion } from './pages/aria-components/aria-accordion/aria-accordion';
 import { AriaCombobox } from './pages/aria-components/aria-combobox/aria-combobox';
+import { AriaListbox } from './pages/aria-components/aria-listbox/aria-listbox';
 
 export const routes: Routes = [
     {
@@ -196,6 +197,13 @@ export const routes: Routes = [
                 component: AriaCombobox,
                 data: {
                     title: 'combobox',
+                },
+            },
+            {
+                path: 'aria-listbox',
+                component: AriaListbox,
+                data: {
+                    title: 'listbox',
                 },
             }
         ]
