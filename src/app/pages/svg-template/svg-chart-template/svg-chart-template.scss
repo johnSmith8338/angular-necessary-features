@@ -1,8 +1,10 @@
+@use 'import' as app;
+
 :host {
   display: grid;
   grid-auto-flow: column;
   grid-template-columns: 1fr 1fr;
-  gap: 16px;
+  gap: #{app.$padding-16 + 0px};
 }
 
 .text {
@@ -13,7 +15,7 @@
 }
 
 .rect {
-  fill: #787878;
+  fill: var(--dark-grey);
 }
 
 .group {
@@ -22,31 +24,31 @@
   &:hover {
     .rect {
       fill: transparent;
-      stroke: #787878;
+      stroke: var(--dark-grey);
     }
 
     .count {
-      fill: #787878;
+      fill: var(--dark-grey);
     }
   }
 
   &.active {
     .rect {
-      fill: #2c9f1d;
+      fill: var(--green);
     }
 
     .label {
-      fill: #2c9f1d;
+      fill: var(--green);
     }
 
     .count {
-      fill: #dedede;
+      fill: var(--white);
     }
   }
 }
 
 .count {
-  fill: #dedede;
+  fill: var(--white);
   font-size: 14px;
   font-weight: 600;
 }

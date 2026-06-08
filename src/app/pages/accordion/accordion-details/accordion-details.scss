@@ -1,8 +1,10 @@
+@use 'import' as app;
+
 :host {
   transition-behavior: allow-discrete;
   display: grid;
-  gap: 16px;
-  padding: 16px;
+  gap: #{app.$padding-16 + 0px};
+  padding: #{app.$padding-16 + 0px};
   opacity: 1;
   transition: opacity 0.3s ease-in-out, display 0.2s ease-in-out;
 

@@ -1,23 +1,25 @@
+@use 'import' as app;
+
 /** to apply slyle to cdk-dialog we need to use host-context(cdk-dialog-container) because :host would not work */
 :host-context(cdk-dialog-container) {
   display: block;
-  border-radius: 16px;
-  background-color: #dcdcdc;
-  padding: 16px;
-  filter: drop-shadow(0 0 16px hsl(0 0% 0% / 0.2));
+  border-radius: #{app.$border-radius-16 + 0px};
+  background-color: var(--light-grey);
+  padding: #{app.$padding-16 + 0px};
+  filter: drop-shadow(0 0 16px var(--black-transparent));
 }
 
 .header {
   display: grid;
   text-align: center;
-  padding-block-end: 8px;
-  border-bottom: 1px solid hsl(0 0% 0% / 0.2);
+  padding-block-end: #{app.$padding-8 + 0px};
+  border-bottom: 1px solid var(--black-transparent);
 }
 
 .body {
   display: grid;
-  gap: 16px;
-  padding-block-start: 16px;
+  gap: #{app.$padding-16 + 0px};
+  padding-block-start: #{app.$padding-16 + 0px};
 }
 
 label {
@@ -28,10 +30,10 @@ button {
   width: 100%;
 
   &[type='submit'] {
-    margin-block-start: 16px;
+    margin-block-start: #{app.$padding-16 + 0px};
   }
 }
 
 .error {
-  color: #bd0000;
+  color: var(--red);
 }

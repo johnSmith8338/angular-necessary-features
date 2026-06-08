@@ -2,7 +2,7 @@
 
 :host {
   display: block;
-  padding-block-start: 64px;
+  padding-block-start: calc(#{app.$header-height + 0px} + #{app.$padding-64 + 0px});
 }
 
 h2 {
@@ -10,22 +10,22 @@ h2 {
 }
 
 .content {
-  gap: 24px;
-  padding: 16px;
+  gap: #{app.$padding-24 + 0px};
+  padding: #{app.$padding-16 + 0px};
   margin-inline: auto;
   @extend %card-view;
 
   &:not(:first-child) {
-    margin-block-start: 24px;
+    margin-block-start: #{app.$padding-24 + 0px};
   }
 }
 
 .grath {
   display: flex;
-  gap: 16px;
+  gap: #{app.$padding-16 + 0px};
   justify-content: center;
   align-items: flex-end;
-  border-bottom: 1px solid #333;
+  border-bottom: 1px solid var(--black);
 }
 
 .grath-item {
@@ -33,4 +33,25 @@ h2 {
   justify-content: center;
   inline-size: 48px;
   block-size: calc(var(--height) * 1px);
+}
+
+.code {
+  display: grid;
+  gap: #{app.$padding-8 + 0px};
+}
+
+.code-text {
+  display: flex;
+  flex-wrap: wrap;
+  gap: #{app.$padding-4 + 0px};
+  align-items: baseline;
+}
+
+.code-label {
+  color: var(--grey);
+}
+
+code {
+  display: grid;
+  gap: #{app.$padding-4 + 0px};
 }

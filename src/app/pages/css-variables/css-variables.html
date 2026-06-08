@@ -7,6 +7,16 @@
             </div>
         }
     </div>
+    <div class="code">
+        <p class="code-text">
+            <span class="code-label">Template:</span>
+            <code>[style.--height]="item.count"</code>
+        </p>
+        <div class="code-text">
+            <span class="code-label">CSS:</span>
+            <code>block-size: calc(var(--height) * 1px);</code>
+        </div>
+    </div>
 </div>
 
 <div class="content">
@@ -16,6 +26,20 @@
             <app-css-variables-item [item]="item"></app-css-variables-item>
         }
     </div>
+    <div class="code">
+        <p class="code-text">
+            <span class="code-label">.ts:</span>
+            <code>
+                <span>protected readonly bar = viewChild&lsaquo;ElementRef&rsaquo;('bar');</span>
+                <span>const element = this.bar()?.nativeElement;</span>
+                <span>this.renderer.setStyle(element, '--height', `$&#123;item.count&#125;px`, RendererStyleFlags2.DashCase)</span>
+            </code>
+        </p>
+        <div class="code-text">
+            <span class="code-label">CSS:</span>
+            <code>block-size: var(--height);</code>
+        </div>
+    </div>
 </div>
 
 <div class="content">
@@ -24,5 +48,15 @@
         @for (item of items(); track $index) {
             <app-css-variables-host [item]="item"></app-css-variables-host>
         }
+    </div>
+    <div class="code">
+        <p class="code-text">
+            <span class="code-label">.ts:</span>
+            <code>host: &#123;'[style.--height]': 'item().count'&#125;</code>
+        </p>
+        <div class="code-text">
+            <span class="code-label">CSS:</span>
+            <code>block-size: calc(var(--height) * 1px);</code>
+        </div>
     </div>
 </div>

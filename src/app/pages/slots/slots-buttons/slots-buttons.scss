@@ -1,4 +1,6 @@
+@use 'import' as app;
+
 :host {
   display: flex;
-  gap: 16px;
+  gap: #{app.$padding-16 + 0px};
 }

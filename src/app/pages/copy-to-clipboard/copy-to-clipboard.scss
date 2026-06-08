@@ -2,50 +2,50 @@
 
 :host {
   display: block;
-  padding-block-start: 64px;
+  padding-block-start: calc(#{app.$header-height + 0px} + #{app.$padding-64 + 0px});
 }
 
 .content {
-  padding: 16px;
+  padding: #{app.$padding-16 + 0px};
   margin-inline: auto;
   @extend %card-view;
 }
 
 .header {
-  padding-block-end: 16px;
-  border-bottom: 1px solid hsl(0 0% 0% / 0.2);
+  padding-block-end: #{app.$padding-16 + 0px};
+  border-bottom: 1px solid var(--black-transparent);
   text-align: center;
 }
 
 .body {
   display: grid;
-  gap: 24px;
-  padding-block-start: 16px;
+  gap: #{app.$padding-24 + 0px};
+  padding-block-start: #{app.$padding-16 + 0px};
 }
 
 .section {
   display: grid;
-  gap: 16px;
+  gap: #{app.$padding-16 + 0px};
 }
 
 .actions {
   display: flex;
-  gap: 8px;
+  gap: #{app.$padding-8 + 0px};
 }
 
 .list {
-  padding-block-start: 16px;
-  border-top: 1px solid hsl(0 0% 0% / 0.2);
+  padding-block-start: #{app.$padding-16 + 0px};
+  border-top: 1px solid var(--black-transparent);
 }
 
 .notification {
   display: grid;
   position: fixed;
   inset: auto auto 48px;
-  padding: 16px;
-  background-color: #333;
-  color: #d8d8d8;
-  corner-shape: squircle;
-  border-radius: 16px;
-  border: 1px solid hsl(0 0% 0% / 0.2);
+  padding: #{app.$padding-16 + 0px};
+  background-color: var(--black);
+  color: var(--light-grey);
+  corner-shape: #{app.$corner-shape};
+  border-radius: #{app.$border-radius-16 + 0px};
+  border: 1px solid var(--black-transparent);
 }

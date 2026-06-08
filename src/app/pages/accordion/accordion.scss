@@ -2,7 +2,7 @@
 
 :host {
   display: block;
-  padding-block-start: 64px;
+  padding-block-start: calc(#{app.$header-height + 0px} + #{app.$padding-64 + 0px});
 }
 
 .content {

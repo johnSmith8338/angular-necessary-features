@@ -6,14 +6,14 @@
 
 .content {
   display: grid;
-  gap: 16px;
-  padding: 16px;
+  gap: #{app.$padding-16 + 0px};
+  padding: #{app.$padding-16 + 0px};
   @extend %card-view;
 }
 
 form {
   display: grid;
-  gap: 16px;
+  gap: #{app.$padding-16 + 0px};
 }
 
 .field {

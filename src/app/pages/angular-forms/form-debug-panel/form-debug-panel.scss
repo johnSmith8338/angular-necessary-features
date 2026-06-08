@@ -1,21 +1,21 @@
 @use 'import' as app;
 
 :host {
-  padding: 16px;
+  padding: #{app.$padding-16 + 0px};
   @extend %card-view;
 }
 
 .debug-section {
   &.row {
     display: flex;
-    gap: 8px;
+    gap: #{app.$padding-8 + 0px};
   }
 }
 
 .valid {
-  color: forestgreen;
+  color: var(--green);
 }
 
 .invalid {
-  color: crimson;
+  color: var(--red);
 }

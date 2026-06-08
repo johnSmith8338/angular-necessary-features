@@ -1,3 +1,5 @@
+@use 'import' as app;
+
 :host {
   display: block;
   position: relative;
@@ -11,14 +13,15 @@ ul {
   padding: 0;
   margin: 0;
   list-style: none;
-  background-color: #707070;
-  border-radius: 8px;
-  corner-shape: squircle;
-  border: 1px solid hsl(0 0% 0% / 0.2);
+  color: var(--black);
+  background-color: var(--light-grey);
+  border-radius: #{app.$border-radius-16 + 0px};
+  corner-shape: #{app.$corner-shape};
+  border: 1px solid var(--black-transparent);
   display: grid;
   inline-size: max-content;
   position: absolute;
-  top: calc(100% + 4px);
+  top: calc(100% + #{app.$padding-8 + 0px});
   right: 0;
   overflow: clip;
 
@@ -28,15 +31,15 @@ ul {
 }
 
 a {
-  padding-block: 8px;
-  padding-inline: 16px;
+  padding-block: #{app.$padding-8 + 0px};
+  padding-inline: #{app.$padding-16 + 0px};
   color: inherit;
   text-decoration: none;
 }
 
 @media (hover:hover) {
   a:hover {
-    background-color: #f8f8f8;
-    color: #333;
+    background-color: var(--white);
+    color: var(--black);
   }
 }

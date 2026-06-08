@@ -1,7 +1,7 @@
 @use 'import' as app;
 
 :host {
-  padding: 16px;
+  padding: #{app.$padding-16 + 0px};
   margin-inline: auto;
   @extend %card-view;
 }
@@ -9,15 +9,15 @@
 :host(.expanded) {
   .content {
     block-size: var(--expandedHeight);
-    padding-block-end: 1.5rem;
+    padding-block-end: #{app.$padding-24 + 0px};
   }
 }
 
 .content {
   overflow: clip;
   block-size: var(--collapsedHeight);
-  mask-image: linear-gradient(black, black calc(100% - 1.5rem), transparent 100%);
-  mask-size: 100% calc(100% + 1.5rem);
+  mask-image: linear-gradient(black, black calc(100% - #{app.$padding-24 + 0px}), transparent 100%);
+  mask-size: 100% calc(100% + #{app.$padding-24 + 0px});
   mask-position: bottom;
   transition: block-size 0.3s, padding-block-end 0.3s;
 }

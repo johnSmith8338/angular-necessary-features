@@ -3,7 +3,7 @@
 :host {
   display: grid;
   grid-auto-flow: column;
-  gap: 16px;
+  gap: #{app.$padding-16 + 0px};
 
   @media (width<=1024px) {
     grid-auto-flow: row;
@@ -11,23 +11,23 @@
 }
 
 .content {
-  padding: 16px;
+  padding: #{app.$padding-16 + 0px};
   @extend %card-view;
 }
 
 form {
   display: grid;
-  gap: 16px;
+  gap: #{app.$padding-16 + 0px};
 }
 
 .form {
   display: grid;
-  gap: 16px;
+  gap: #{app.$padding-16 + 0px};
 }
 
 .group {
   display: grid;
-  gap: 8px;
+  gap: #{app.$padding-8 + 0px};
 }
 
 label:not(.checkbox-label) {
@@ -36,7 +36,7 @@ label:not(.checkbox-label) {
 
 .checkbox-label {
   display: flex;
-  gap: 4px;
+  gap: #{app.$padding-4 + 0px};
 }
 
 .error {

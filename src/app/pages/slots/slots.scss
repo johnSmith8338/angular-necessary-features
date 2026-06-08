@@ -1,48 +1,37 @@
+@use 'import' as app;
+
 :host {
   display: block;
-  padding-block-start: 64px;
+  padding-block-start: calc(#{app.$header-height + 0px} + #{app.$padding-64 + 0px});
 }
 
 .controls {
-  max-inline-size: 480px;
+  max-inline-size: #{app.$max-inline-size + 0px};
   margin-inline: auto;
-  margin-block-end: 16px;
+  margin-block-end: #{app.$padding-16 + 0px};
   display: flex;
-  gap: 16px;
-
-  // label {
-  //   position: relative;
-  //   display: inline-block;
-  //   inline-size: 60px;
-  //   block-size: 34px;
-
-  //   input {
-  //     opacity: 0;
-  //     inline-size: 0;
-  //     block-size: 0;
-  //   }
-  // }
+  gap: #{app.$padding-16 + 0px};
 }
 
 mark {
   block-size: fit-content;
   inline-size: fit-content;
-  border-radius: 16px;
-  padding-block: 4px;
-  padding-inline: 8px;
+  border-radius: #{app.$padding-16 + 0px};
+  padding-block: #{app.$padding-4 + 0px};
+  padding-inline: #{app.$padding-8 + 0px};
   margin-inline-start: auto;
   text-transform: lowercase;
-  background-color: #1bca4f;
+  background-color: var(--green);
   line-height: 1;
 
   &.loading {
-    background-color: #b8b8b8;
+    background-color: var(--grey);
   }
 }
 
 .new-line {
   display: flex;
-  gap: 16px;
+  gap: #{app.$padding-16 + 0px};
   justify-content: space-between;
 }
 

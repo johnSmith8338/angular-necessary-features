@@ -2,7 +2,7 @@
 
 :host {
   text-align: center;
-  padding: 16px;
+  padding: #{app.$padding-16 + 0px};
   gap: 0;
   @extend %card-view;
 }
@@ -10,7 +10,7 @@
 .avatar {
   display: grid;
   place-items: center;
-  margin-block-end: 16px;
+  margin-block-end: #{app.$padding-16 + 0px};
 }
 
 img {
@@ -22,5 +22,5 @@ img {
 }
 
 .skills {
-  padding-block-start: 16px;
+  padding-block-start: #{app.$padding-16 + 0px};
 }

@@ -10,6 +10,10 @@
   </button>
   @if (menuOpened()) {
     <ul class="menu-list" [class.opened]="menuOpened()" (clickOutside)="menuOpened.set(false)">
+      <li class="menu-button-wrapper">
+        <span>MENU</span>
+        <button class="button icon" (click)="toggleMenu()">✕</button>
+      </li>
       @for (item of menuItems(); track item.link) {
         <li class="menu-item">
           <a class="button" 

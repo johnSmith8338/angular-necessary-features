@@ -1,27 +1,32 @@
+@use 'import' as app;
+
 :host {
     display: grid;
 }
 
 header {
+    position: fixed;
+    inset: 0 0 auto 0;
+    z-index: 1;
     display: flex;
-    gap: 16px;
+    gap: #{app.$padding-16 + 0px};
     justify-content: space-between;
     align-items: center;
-    padding-inline: 16px;
-    background-color: #fff;
+    padding-inline: #{app.$padding-16 + 0px};
+    background-color: var(--white);
 
     @media (width>=1024px) {
-        block-size: 64px;
+        block-size: #{app.$header-height + 0px};
     }
 
     @media (width<=1024px) {
-        padding-block: 8px;
+        padding-block: #{app.$padding-8 + 0px};
     }
 }
 
 main {
-    padding-inline: 16px;
-    padding-block-end: 32px;
+    padding-inline: #{app.$padding-8 + 0px};
+    padding-block-end: #{app.$padding-32 + 0px};
 }
 
 h2 {
@@ -39,31 +44,29 @@ h2 {
 
 .menu-button {
     display: grid;
-    gap: 4px;
-    anchor-name: --menu;
+    gap: #{app.$padding-4 + 0px};
 }
 
 .dash {
     inline-size: 24px;
     block-size: 4px;
     background-color: #333;
-    border-radius: 4px;
+    border-radius: #{app.$border-radius-4 + 0px};
 }
 
 .menu-list {
     display: flex;
     flex-wrap: wrap;
-    gap: 4px;
-    max-inline-size: 480px;
+    gap: #{app.$padding-4 + 0px};
     position: absolute;
-    position-anchor: --menu;
-    position-area: bottom span-left;
+    inset: 0 0 auto 0;
 
-    border-radius: 24px;
-    corner-shape: squircle;
-    border: 1px solid hsl(0 0% 100% / 0.2);
-    background-color: #d9d9d9;
-    padding: 8px;
+    border-radius: 0 0 #{app.$border-radius-24 + 0px} #{app.$border-radius-24 + 0px};
+    corner-shape: #{app.$corner-shape};
+    border: 1px solid var(--white-transparent);
+    background-color: var(--light-grey);
+    padding: #{app.$padding-16 + 0px};
+    padding-block-start: calc(#{app.$button-size + 0px} + #{app.$padding-32 + 0px});
     z-index: 1;
 
     &.opened {
@@ -80,4 +83,17 @@ h2 {
     display 0.3s,
     translate 0.3s;
     transition-behavior: allow-discrete;
+}
+
+.menu-button-wrapper {
+    position: absolute;
+    inset: #{app.$padding-16 + 0px} #{app.$padding-16 + 0px} auto #{app.$padding-16 + 0px};
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    span {
+        font-size: 24px;
+        font-weight: 600;
+    }
 }

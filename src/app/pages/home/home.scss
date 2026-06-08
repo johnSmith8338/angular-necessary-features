@@ -2,13 +2,13 @@
 
 :host {
   display: block;
-  padding-block-start: 64px;
+  padding-block-start: calc(#{app.$header-height + 0px} + #{app.$padding-64 + 0px});
 }
 
 .content {
-  max-inline-size: 480px;
+  max-inline-size: #{app.$max-inline-size + 0px};
   margin-inline: auto;
   text-align: center;
   display: grid;
-  gap: 16px;
+  gap: #{app.$padding-16 + 0px};
 }

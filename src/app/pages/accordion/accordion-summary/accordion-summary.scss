@@ -1,3 +1,5 @@
+@use 'import' as app;
+
 :host {
   display: grid;
   grid-template-columns: 1fr max-content;
@@ -5,9 +7,9 @@
     'title btn'
     'text btn'
   ;
-  gap: 8px;
-  padding: 16px;
-  background-color: #d8d8d8;
+  gap: #{app.$padding-8 + 0px};
+  padding: #{app.$padding-16 + 0px};
+  background-color: var(--light-grey);
 }
 
 h3 {
