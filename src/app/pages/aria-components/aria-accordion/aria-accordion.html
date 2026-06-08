@@ -7,12 +7,12 @@
                     #trigger="ngAccordionTrigger"
                     [expanded]="$first"
                     [disabled]="$last">
-                    {{item.title}}
-                </span>
-                <span class="icon" [class.expanded]="trigger.expanded()" aria-hidden="true">
-                    @for (_ of [].constructor(2); track $index) {
-                        <span class="dash"></span>
-                    }
+                    <span>{{item.title}}</span>
+                    <span class="icon" [class.expanded]="trigger.expanded()" aria-hidden="true">
+                        @for (_ of [].constructor(2); track $index) {
+                            <span class="dash"></span>
+                        }
+                    </span>
                 </span>
             </h3>
             <div class="accordion-content" ngAccordionPanel #panel="ngAccordionPanel">

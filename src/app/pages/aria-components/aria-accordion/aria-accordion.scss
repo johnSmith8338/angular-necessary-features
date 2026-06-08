@@ -39,17 +39,17 @@
   background-color: #333;
   transition: rotate 0.2s;
 
-  &:first-child {
-    translate: 0px 8px;
-  }
-
   &:last-child {
     rotate: 90deg;
-    translate: 0px 6px;
+    translate: 0px -2px;
   }
 }
 
 [ngAccordionTrigger] {
+  inline-size: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
   color: #727272;
   cursor: pointer;
 }
@@ -61,4 +61,8 @@
 [ngAccordionTrigger][aria-disabled='true'] {
   opacity: 0.4;
   cursor: not-allowed;
+}
+
+.accordion-content {
+  max-inline-size: 65ch;
 }

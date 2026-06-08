@@ -1,0 +1,29 @@
+<label class="toggle focus">
+        <span class="input">
+            <span>{{`Selection&nbsp;mode&nbsp;(${selectionMode()}):`}}</span>
+            <input type="checkbox" [checked]="selectionMode()==='follow'" (change)="toggleSelectionMode()" />
+        </span>
+        <small>
+            @if (selectionMode()==='explicit') {
+                <em>When you use keyboard arrows to navigate list, to select list item you should press Enter when item is focused</em>
+            }@else {
+                <em>When you use keyboard arrows to navigate list, item in focus is autoselected</em>
+            }
+        </small>
+    </label>
+<div ngTabs>
+    <div ngTabList [selectionMode]="selectionMode()" [(selectedTab)]="selectedTab">
+        @for (user of users(); track user.id) {
+            <div ngTab [value]="user.id.toString()">{{user.firstName}}</div>
+        }
+    </div>
+    <div class="content-window">
+        <div ngTabPanel [preserveContent]="true" value="movie">
+            @if (selectedUser(); as user) {
+                <ng-template ngTabContent>
+                    <app-user-card [user]="user" />
+                </ng-template>
+            }
+        </div>
+    </div>
+</div>

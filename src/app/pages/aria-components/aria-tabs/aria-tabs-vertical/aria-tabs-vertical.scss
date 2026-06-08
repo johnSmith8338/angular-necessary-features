@@ -1,0 +1,103 @@
+@use 'import' as app;
+
+:host {
+  display: grid;
+  align-content: start;
+  gap: 16px;
+  max-inline-size: 482px;
+}
+
+[ngTabs] {
+  display: flex;
+  gap: 0px;
+  max-block-size: 336px;
+  @extend %card-view;
+}
+
+[ngTabList] {
+  padding: 0;
+  min-inline-size: 110px;
+  display: flex;
+  flex-direction: column;
+  list-style: none;
+  position: relative;
+  border-right: 1px solid hsl(0 0% 0% / 0.2);
+
+  scroll-snap-type: x mandatory;
+  overflow-y: auto;
+  @extend %hide-scrollbar;
+}
+
+[ngTab] {
+  flex: 1;
+  padding: 16px;
+  outline: none;
+  text-align: center;
+  color: #333;
+  cursor: pointer;
+}
+
+[ngTab][aria-selected='false']:focus {
+  outline-offset: -4px;
+  outline: 1px solid #b8b8b8;
+}
+
+[ngTab][aria-selected='false']:first-child:focus {
+  border-top-left-radius: 12px;
+}
+
+[ngTab][aria-selected='false']:last-child:focus {
+  border-top-right-radius: 12px;
+}
+
+[ngTab][aria-selected='true'] {
+  color: #f8f8f8;
+  background-color: #333;
+}
+
+[ngTab][aria-selected='true']:focus {
+  outline-offset: -4px;
+  outline: 1px solid #b8b8b8;
+}
+
+[ngTab][aria-selected='true']:first-child:focus {
+  border-top-left-radius: 12px;
+}
+
+[ngTab][aria-selected='true']:last-child:focus {
+  border-top-right-radius: 12px;
+}
+
+.content-window {
+  inline-size: 100%;
+  display: flex;
+  transition: all 0.2s ease-in-out;
+}
+
+[ngTabPanel] {
+  display: grid;
+  inline-size: 100%;
+  padding: 16px;
+  flex: 1;
+}
+
+[ngTabPanel]:focus {
+  outline-offset: -4px;
+  outline: 2px solid #b8b8b8;
+  border-bottom-left-radius: 12px;
+  border-bottom-right-radius: 12px;
+}
+
+.toggle {
+  max-inline-size: 90%;
+}
+
+.focus {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.input {
+  display: flex;
+  align-items: center;
+}

@@ -1,0 +1,111 @@
+@use 'import' as app;
+
+:host {
+  display: grid;
+  gap: 16px;
+  max-inline-size: 482px;
+}
+
+[ngTabs] {
+  @extend %card-view;
+}
+
+[ngTabList] {
+  padding: 0;
+  display: flex;
+  list-style: none;
+  position: relative;
+  border-bottom: 1px solid hsl(0 0% 0% / 0.2);
+
+  scroll-snap-type: x mandatory;
+  overflow-x: auto;
+  @extend %hide-scrollbar;
+}
+
+[ngTab] {
+  flex: 1;
+  padding: 16px;
+  outline: none;
+  text-align: center;
+  color: #333;
+  cursor: pointer;
+}
+
+[ngTab][aria-selected='false']:focus {
+  outline-offset: -4px;
+  outline: 1px solid #b8b8b8;
+}
+
+[ngTab][aria-selected='false']:first-child:focus {
+  border-top-left-radius: 12px;
+}
+
+[ngTab][aria-selected='false']:last-child:focus {
+  border-top-right-radius: 12px;
+}
+
+[ngTab][aria-selected='true'] {
+  color: #f8f8f8;
+  background-color: #333;
+}
+
+[ngTab][aria-selected='true']:focus {
+  outline-offset: -4px;
+  outline: 1px solid #b8b8b8;
+}
+
+[ngTab][aria-selected='true']:first-child:focus {
+  border-top-left-radius: 12px;
+}
+
+[ngTab][aria-selected='true']:last-child:focus {
+  border-top-right-radius: 12px;
+}
+
+.content-window {
+  // width: 300%;
+  inline-size: 100%;
+  display: flex;
+  transition: all 0.2s ease-in-out;
+}
+
+// [ngTabList]:has([ngTab]:nth-child(1)[aria-selected='true'])~.content-window {
+//   transform: translateX(0%);
+// }
+
+// [ngTabList]:has([ngTab]:nth-child(2)[aria-selected='true'])~.content-window {
+//   transform: translateX(-33.333%);
+// }
+
+// [ngTabList]:has([ngTab]:nth-child(3)[aria-selected='true'])~.content-window {
+//   transform: translateX(-66.666%);
+// }
+
+[ngTabPanel] {
+  display: grid;
+  // place-items: center;
+  inline-size: 100%;
+  padding: 16px;
+  flex: 1;
+}
+
+[ngTabPanel]:focus {
+  outline-offset: -4px;
+  outline: 2px solid #b8b8b8;
+  border-bottom-left-radius: 12px;
+  border-bottom-right-radius: 12px;
+}
+
+.toggle {
+  max-inline-size: 90%;
+}
+
+.focus {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.input {
+  display: flex;
+  align-items: center;
+}
