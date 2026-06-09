@@ -1,8 +1,8 @@
 <header>
-  <h2>
-    <a [routerLink]="'/'">test project</a>
-  </h2>
-  <a [routerLink]="['aria-components']" class="button aria">Aria</a>
+  <div class="logo">
+    <a [routerLink]="'/'">⌐(-■_■)></a>
+  </div>
+  <p class="title">test project</p>
   <button class="menu-button" (click)="toggleMenu()">
     @for (_ of [].constructor(3); track $index) {
       <span class="dash"></span>
@@ -11,17 +11,26 @@
   @if (menuOpened()) {
     <ul class="menu-list" [class.opened]="menuOpened()" (clickOutside)="menuOpened.set(false)">
       <li class="menu-button-wrapper">
-        <span>MENU</span>
+        <h2>MENU</h2>
         <button class="button icon" (click)="toggleMenu()">✕</button>
       </li>
-      @for (item of menuItems(); track item.link) {
-        <li class="menu-item">
-          <a class="button" 
-            [routerLink]="item.link" 
-            routerLinkActive="active" 
-            [routerLinkActiveOptions]="{exact:true}"
-            (click)="closeMenu()">
-            {{item.title}}</a>
+      @for (group of menuGroups(); track group.title) {
+        <li class="menu-group-title">
+          <h3>{{group.title}}</h3>
+        </li>
+        <li>
+          <ul class="menu-sublist">
+            @for (item of group.items; track item.link) {
+              <li class="menu-item">
+                <a class="button" 
+                  [routerLink]="item.link" 
+                  routerLinkActive="active" 
+                  [routerLinkActiveOptions]="{exact:true}"
+                  (click)="closeMenu()">
+                  {{item.title}}</a>
+              </li>
+            }
+          </ul>
         </li>
       }
     </ul>

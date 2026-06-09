@@ -7,6 +7,7 @@
 }
 
 [ngTabs] {
+  gap: 0;
   @extend %card-view;
 }
 
@@ -66,6 +67,7 @@
   // width: 300%;
   inline-size: 100%;
   display: flex;
+  background-color: var(--light-grey);
   transition: all 0.2s ease-in-out;
 }
 

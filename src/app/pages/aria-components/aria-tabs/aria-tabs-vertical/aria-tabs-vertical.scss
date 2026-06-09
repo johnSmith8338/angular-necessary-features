@@ -65,12 +65,13 @@
 }
 
 [ngTab][aria-selected='true']:last-child:focus {
-  border-top-right-radius: 12px;
+  border-bottom-left-radius: 12px;
 }
 
 .content-window {
   inline-size: 100%;
   display: flex;
+  background-color: var(--light-grey);
   transition: all 0.2s ease-in-out;
 }
 

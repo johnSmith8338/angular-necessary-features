@@ -4,6 +4,7 @@
   text-align: center;
   padding: #{app.$padding-16 + 0px};
   gap: 0;
+  background-color: var(--white);
   @extend %card-view;
 }
 

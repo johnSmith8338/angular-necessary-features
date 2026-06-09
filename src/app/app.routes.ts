@@ -40,6 +40,7 @@ export const routes: Routes = [
         data: {
             title: 'show-more',
             showInMenu: true,
+            group: 'CDK'
         }
     },
     {
@@ -48,6 +49,7 @@ export const routes: Routes = [
         data: {
             title: 'slots',
             showInMenu: true,
+            group: 'CDK'
         }
     },
     {
@@ -56,6 +58,7 @@ export const routes: Routes = [
         data: {
             title: 'steps',
             showInMenu: true,
+            group: 'CDK'
         }
     },
     {
@@ -64,6 +67,7 @@ export const routes: Routes = [
         data: {
             title: '@defer',
             showInMenu: true,
+            group: 'CDK'
         }
     },
     {
@@ -72,6 +76,7 @@ export const routes: Routes = [
         data: {
             title: 'svg',
             showInMenu: true,
+            group: 'CDK'
         }
     },
     {
@@ -80,6 +85,7 @@ export const routes: Routes = [
         data: {
             title: 'ngTemplateOutlet',
             showInMenu: true,
+            group: 'CDK'
         }
     },
     {
@@ -88,6 +94,7 @@ export const routes: Routes = [
         data: {
             title: 'click-outside',
             showInMenu: true,
+            group: 'CDK'
         }
     },
     {
@@ -96,6 +103,7 @@ export const routes: Routes = [
         data: {
             title: 'drag-drop',
             showInMenu: true,
+            group: 'CDK'
         }
     },
     {
@@ -104,6 +112,7 @@ export const routes: Routes = [
         data: {
             title: 'drag-resize',
             showInMenu: true,
+            group: 'CDK'
         }
     },
     {
@@ -112,6 +121,7 @@ export const routes: Routes = [
         data: {
             title: 'modal',
             showInMenu: true,
+            group: 'CDK'
         }
     },
     {
@@ -120,6 +130,7 @@ export const routes: Routes = [
         data: {
             title: 'copy',
             showInMenu: true,
+            group: 'CDK'
         }
     },
     {
@@ -128,6 +139,7 @@ export const routes: Routes = [
         data: {
             title: 'accordion',
             showInMenu: true,
+            group: 'CDK'
         }
     },
     {
@@ -136,6 +148,7 @@ export const routes: Routes = [
         data: {
             title: 'variables',
             showInMenu: true,
+            group: 'CDK'
         }
     },
     {
@@ -147,15 +160,11 @@ export const routes: Routes = [
         },
         children: [
             {
-                path: '',
-                redirectTo: 'reactive-form',
-                pathMatch: 'full'
-            },
-            {
                 path: 'reactive-form',
                 component: ReactiveForm,
                 data: {
                     title: 'reactive-form',
+                    group: 'FORMS'
                 },
             },
             {
@@ -163,6 +172,7 @@ export const routes: Routes = [
                 component: SignalFormHybrid,
                 data: {
                     title: 'form-hybrid',
+                    group: 'FORMS'
                 },
             },
             {
@@ -170,6 +180,7 @@ export const routes: Routes = [
                 component: SignalFormAsyncValidation,
                 data: {
                     title: 'asyc-validation',
+                    group: 'FORMS'
                 },
             }
         ]
@@ -183,15 +194,11 @@ export const routes: Routes = [
         },
         children: [
             {
-                path: '',
-                redirectTo: 'aria-accordion',
-                pathMatch: 'full'
-            },
-            {
                 path: 'aria-accordion',
                 component: AriaAccordion,
                 data: {
                     title: 'accordion',
+                    group: 'ARIA'
                 },
             },
             {
@@ -199,6 +206,7 @@ export const routes: Routes = [
                 component: AriaCombobox,
                 data: {
                     title: 'combobox',
+                    group: 'ARIA'
                 },
             },
             {
@@ -206,6 +214,7 @@ export const routes: Routes = [
                 component: AriaListbox,
                 data: {
                     title: 'listbox',
+                    group: 'ARIA'
                 },
             },
             {
@@ -213,6 +222,7 @@ export const routes: Routes = [
                 component: AriaMultiselect,
                 data: {
                     title: 'multiselect',
+                    group: 'ARIA'
                 },
             },
             {
@@ -220,6 +230,7 @@ export const routes: Routes = [
                 component: AriaTabs,
                 data: {
                     title: 'tabs',
+                    group: 'ARIA'
                 },
             }
         ]

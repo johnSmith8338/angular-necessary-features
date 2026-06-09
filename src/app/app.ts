@@ -1,6 +1,6 @@
 import { Component, inject, signal } from '@angular/core';
 import { RouterOutlet, RouterLinkWithHref, RouterLinkActive, Router, NavigationEnd } from '@angular/router';
-import { MenuItem, MenuSvc } from './services/menu-svc';
+import { MenuGroup, MenuSvc } from './services/menu-svc';
 import { filter } from 'rxjs';
 import { ClickOutside } from "./directives/click-outside";
 
@@ -16,7 +16,7 @@ export class App {
   private menuSvc = inject(MenuSvc);
   private router = inject(Router);
 
-  menuItems = signal<MenuItem[]>(this.menuSvc.getMenuItems());
+  menuGroups = signal<MenuGroup[]>(this.menuSvc.getMenuGroups());
   menuOpened = signal(false);
 
   constructor() {

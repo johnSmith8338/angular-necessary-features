@@ -2,11 +2,14 @@
 
 :host {
   display: grid;
-  gap: 8px;
+  gap: #{app.$padding-8 + 0px};
   @extend %hide-scrollbar;
   grid-auto-flow: column;
   overflow-y: auto;
   scroll-snap-type: x mandatory;
+  scroll-padding-inline: #{app.$padding-16 + 0px};
+  padding-inline: #{app.$padding-16 + 0px};
+  margin-inline: #{app.$padding-16 * -1px};
 }
 
 .button {
