@@ -10,11 +10,11 @@
 }
 
 .button {
-  color: #b5b5b5;
+  color: var(--grey);
   width: max-content;
 
   &.active {
-    color: #fff;
+    color: var(--white);
   }
 
   @media (width<=1024px) {

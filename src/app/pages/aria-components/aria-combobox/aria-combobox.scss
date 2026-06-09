@@ -1,20 +1,22 @@
+@use 'import' as app;
+
 :host {
   display: block;
 }
 
 div[ngCombobox] {
   display: grid;
-  gap: 16px;
+  gap: #{app.$padding-16 + 0px};
 }
 
 .card-header {
   display: grid;
-  gap: 8px;
+  gap: #{app.$padding-8 + 0px};
 }
 
 .search-field {
   display: flex;
-  gap: 8px;
+  gap: #{app.$padding-8 + 0px};
   align-items: center;
 }
 
@@ -25,23 +27,27 @@ div[ngCombobox] {
 .popup {
   display: grid;
   inline-size: 100%;
-  max-inline-size: 480px;
-  max-block-size: 300px;
-  background-color: #d8d8d8;
-  border-radius: 16px;
-  corner-shape: squircle;
+  max-inline-size: #{app.$max-inline-size + 0px};
+  max-block-size: #{app.$max-inline-size + 0px};
+  background-color: var(--light-grey);
+  border-radius: #{app.$border-radius-16 + 0px};
+  corner-shape: #{app.$corner-shape};
   overflow-y: auto;
+
+  @media (width<=1024px) {
+    inline-size: #{app.$input-inline-size + 0px};
+  }
 }
 
 [ngOption] {
   display: grid;
   align-items: center;
-  padding-block: 8px;
-  padding-inline: 16px;
+  padding-block: #{app.$padding-8 + 0px};
+  padding-inline: #{app.$padding-16 + 0px};
   cursor: pointer;
 
   small {
-    color: #888888;
+    color: var(--dark-grey);
   }
 }
 
@@ -52,8 +58,8 @@ div[ngCombobox] {
 }
 
 [ngOption]:hover {
-  background-color: #333;
-  color: #d8d8d8;
+  background-color: var(--black);
+  color: var(--light-grey);
 }
 
 [ngOption]:not([aria-selected='true']) .check-icon {
@@ -62,6 +68,6 @@ div[ngCombobox] {
 
 .users {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-  gap: 16px;
+  grid-template-columns: repeat(auto-fill, minmax(#{app.$min-inline-size + 0px}, 1fr));
+  gap: #{app.$padding-16 + 0px};
 }

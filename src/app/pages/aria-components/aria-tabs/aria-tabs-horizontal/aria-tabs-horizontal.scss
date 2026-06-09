@@ -15,7 +15,7 @@
   display: flex;
   list-style: none;
   position: relative;
-  border-bottom: 1px solid hsl(0 0% 0% / 0.2);
+  border-bottom: 1px solid var(--black-transparent);
 
   scroll-snap-type: x mandatory;
   overflow-x: auto;
@@ -24,7 +24,7 @@
 
 [ngTab] {
   flex: 1;
-  padding: 16px;
+  padding: #{app.$padding-16 + 0px};
   outline: none;
   text-align: center;
   color: #333;
@@ -45,13 +45,13 @@
 }
 
 [ngTab][aria-selected='true'] {
-  color: #f8f8f8;
-  background-color: #333;
+  color: var(--light-grey);
+  background-color: var(--black);
 }
 
 [ngTab][aria-selected='true']:focus {
   outline-offset: -4px;
-  outline: 1px solid #b8b8b8;
+  outline: 1px solid var(--light-grey);
 }
 
 [ngTab][aria-selected='true']:first-child:focus {
@@ -85,13 +85,13 @@
   display: grid;
   // place-items: center;
   inline-size: 100%;
-  padding: 16px;
+  padding: #{app.$padding-16 + 0px};
   flex: 1;
 }
 
 [ngTabPanel]:focus {
   outline-offset: -4px;
-  outline: 2px solid #b8b8b8;
+  outline: 2px solid var(--light-grey);
   border-bottom-left-radius: 12px;
   border-bottom-right-radius: 12px;
 }

@@ -3,20 +3,20 @@
 :host {
   display: flex;
   flex-wrap: wrap;
-  gap: 16px;
-  padding-block-start: 64px;
+  gap: #{app.$padding-16 + 0px};
+  padding-block-start: calc(#{app.$header-height + 0px} + #{app.$padding-64 + 0px});
 }
 
 nav {
-  padding: 16px;
+  padding: #{app.$padding-16 + 0px};
   max-inline-size: fit-content;
   align-items: start;
   @extend %card-view;
 }
 
 .content {
-  padding: 16px;
-  width: 100%;
+  padding: #{app.$padding-16 + 0px};
+  inline-size: 100%;
   max-inline-size: 100%;
   @extend %card-view;
 

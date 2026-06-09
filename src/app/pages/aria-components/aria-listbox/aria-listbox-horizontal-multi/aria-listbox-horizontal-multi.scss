@@ -1,12 +1,14 @@
+@use 'import' as app;
+
 :host {
   display: grid;
-  gap: 16px;
+  gap: #{app.$padding-16 + 0px};
 }
 
 [ngListbox] {
   display: flex;
   flex-wrap: wrap;
-  gap: 8px;
+  gap: #{app.$padding-8 + 0px};
 }
 
 [ngOption] {
@@ -14,22 +16,22 @@
 }
 
 [ngOption]:focus {
-  border-radius: 8px;
+  border-radius: #{app.$border-radius-8 + 0px};
   outline-offset: 2px;
-  outline-color: #b9b9b9;
+  outline-color: var(--light-grey);
 }
 
 [ngOption][aria-selected='true'] {
   .outline {
-    background-color: #333;
-    color: #d8d8d8;
+    background-color: var(--black);
+    color: var(--light-grey);
   }
 }
 
 .content {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-  gap: 16px;
+  grid-template-columns: repeat(auto-fill, minmax(#{app.$min-inline-size + 0px}, 1fr));
+  gap: #{app.$padding-16 + 0px};
 }
 
 .focus {
