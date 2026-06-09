@@ -12,3 +12,14 @@
     opacity: 0;
   }
 }
+
+p {
+  position: relative;
+
+  &::after {
+    content: '✕';
+    position: absolute;
+    left: 21ch;
+    color: var(--red);
+  }
+}

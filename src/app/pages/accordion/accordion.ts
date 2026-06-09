@@ -23,13 +23,13 @@ export class Accordion {
       title: 'Title h2',
       info: 'Info text goes here',
       subtitle: 'Title h3',
-      text: 'Text with details of this shieet'
+      text: 'Text with details of this sh i eet'
     },
     {
       title: 'Title h2',
       info: 'Info text goes here',
       subtitle: 'Title h3',
-      text: 'Text with details of this shieet'
+      text: 'Text with details of this sh i eet'
     }
   ];
 }

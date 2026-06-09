@@ -9,5 +9,5 @@ import { DragResizeSidebar } from "./drag-resize-sidebar/drag-resize-sidebar";
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class DragResize {
-  content = Array.from({ length: 6 });
+  content = Array.from({ length: 2 });
 }

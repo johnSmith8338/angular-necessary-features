@@ -3,10 +3,10 @@
 :host {
   display: grid;
   grid-auto-flow: column;
-  border-radius: #{app.$border-radius-24 + 0px};
+  border-radius: #{app.$border-radius-16 + 0px};
   border: 1px solid var(--black-transparent);
   overflow: clip;
-  height: calc(100vh - #{app.$header-height + 0px} - #{app.$padding-32 + 0px} - #{app.$padding-64 + 0px});
+  // block-size: calc(100vh - #{app.$header-height + 0px} - #{app.$padding-32 + 0px} - #{app.$padding-64 + 0px});
 
   @media (width<=1024px) {
     grid-auto-flow: row;

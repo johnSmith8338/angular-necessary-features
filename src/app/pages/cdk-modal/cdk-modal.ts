@@ -12,7 +12,7 @@ import { CdkModalForm } from './cdk-modal-form/cdk-modal-form';
 export class CdkModal {
   private dialog = inject(Dialog);
 
-  content = Array.from({ length: 3 });
+  content = Array.from({ length: 2 });
 
   protected openModal() {
     /** 

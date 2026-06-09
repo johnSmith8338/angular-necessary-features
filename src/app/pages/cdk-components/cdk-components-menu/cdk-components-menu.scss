@@ -1,0 +1,26 @@
+@use 'import' as app;
+
+:host {
+  display: grid;
+  gap: #{app.$padding-8 + 0px};
+  @extend %hide-scrollbar;
+  grid-auto-flow: column;
+  overflow-y: auto;
+  scroll-snap-type: x mandatory;
+  scroll-padding-inline: #{app.$padding-16 + 0px};
+  padding-inline: #{app.$padding-16 + 0px};
+  margin-inline: #{app.$padding-16 * -1px};
+}
+
+.button {
+  color: var(--grey);
+  width: max-content;
+
+  &.active {
+    color: var(--white);
+  }
+
+  @media (width<=1024px) {
+    scroll-snap-align: start;
+  }
+}

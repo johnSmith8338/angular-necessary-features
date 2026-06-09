@@ -24,6 +24,7 @@ import { AriaCombobox } from './pages/aria-components/aria-combobox/aria-combobo
 import { AriaListbox } from './pages/aria-components/aria-listbox/aria-listbox';
 import { AriaMultiselect } from './pages/aria-components/aria-multiselect/aria-multiselect';
 import { AriaTabs } from './pages/aria-components/aria-tabs/aria-tabs';
+import { CdkComponents } from './pages/cdk-components/cdk-components';
 
 export const routes: Routes = [
     {
@@ -35,121 +36,58 @@ export const routes: Routes = [
         }
     },
     {
-        path: 'show-more-button',
-        component: ShowMore,
+        path: 'cdk-components',
+        component: CdkComponents,
         data: {
-            title: 'show-more',
+            title: 'cdk',
             showInMenu: true,
-            group: 'CDK'
-        }
-    },
-    {
-        path: 'slots',
-        component: Slots,
-        data: {
-            title: 'slots',
-            showInMenu: true,
-            group: 'CDK'
-        }
-    },
-    {
-        path: 'steps',
-        component: StepsByButtons,
-        data: {
-            title: 'steps',
-            showInMenu: true,
-            group: 'CDK'
-        }
-    },
-    {
-        path: 'defer-load',
-        component: DeferLoading,
-        data: {
-            title: '@defer',
-            showInMenu: true,
-            group: 'CDK'
-        }
-    },
-    {
-        path: 'svg',
-        component: SvgTemplate,
-        data: {
-            title: 'svg',
-            showInMenu: true,
-            group: 'CDK'
-        }
-    },
-    {
-        path: 'stop-repeat-content',
-        component: StopRepeatContent,
-        data: {
-            title: 'ngTemplateOutlet',
-            showInMenu: true,
-            group: 'CDK'
-        }
-    },
-    {
-        path: 'click-outside-directive',
-        component: ClickOutsideTest,
-        data: {
-            title: 'click-outside',
-            showInMenu: true,
-            group: 'CDK'
-        }
-    },
-    {
-        path: 'drag-drop-list',
-        component: DragDropList,
-        data: {
-            title: 'drag-drop',
-            showInMenu: true,
-            group: 'CDK'
-        }
-    },
-    {
-        path: 'drag-to-resize',
-        component: DragResize,
-        data: {
-            title: 'drag-resize',
-            showInMenu: true,
-            group: 'CDK'
-        }
-    },
-    {
-        path: 'cdk-modal',
-        component: CdkModal,
-        data: {
-            title: 'modal',
-            showInMenu: true,
-            group: 'CDK'
-        }
-    },
-    {
-        path: 'copy-to-clipboard',
-        component: CopyToClipboard,
-        data: {
-            title: 'copy',
-            showInMenu: true,
-            group: 'CDK'
-        }
-    },
-    {
-        path: 'accordion',
-        component: Accordion,
-        data: {
-            title: 'accordion',
-            showInMenu: true,
-            group: 'CDK'
-        }
-    },
-    {
-        path: 'css-variables',
-        component: CssVariables,
-        data: {
-            title: 'variables',
-            showInMenu: true,
-            group: 'CDK'
-        }
+        },
+        children: [
+            {
+                path: 'accordion',
+                component: Accordion,
+                data: {
+                    title: 'accordion',
+                    group: 'CDK'
+                }
+            },
+            {
+                path: 'copy-to-clipboard',
+                component: CopyToClipboard,
+                data: {
+                    title: 'copy',
+                    showInMenu: true,
+                    group: 'CDK'
+                }
+            },
+            {
+                path: 'cdk-modal',
+                component: CdkModal,
+                data: {
+                    title: 'modal',
+                    showInMenu: true,
+                    group: 'CDK'
+                }
+            },
+            {
+                path: 'drag-drop-list',
+                component: DragDropList,
+                data: {
+                    title: 'drag-drop',
+                    showInMenu: true,
+                    group: 'CDK'
+                }
+            },
+            {
+                path: 'drag-to-resize',
+                component: DragResize,
+                data: {
+                    title: 'drag-resize',
+                    showInMenu: true,
+                    group: 'CDK'
+                }
+            },
+        ]
     },
     {
         path: 'angular-forms',
@@ -233,6 +171,88 @@ export const routes: Routes = [
                     group: 'ARIA'
                 },
             }
+        ]
+    },
+    {
+        path: 'other-components',
+        component: CdkComponents,
+        data: {
+            title: 'other',
+            showInMenu: true,
+        },
+        children: [
+            {
+                path: 'css-variables',
+                component: CssVariables,
+                data: {
+                    title: 'variables',
+                    showInMenu: true,
+                    group: 'OTHER'
+                }
+            },
+            {
+                path: 'show-more-button',
+                component: ShowMore,
+                data: {
+                    title: 'show-more',
+                    showInMenu: true,
+                    group: 'OTHER'
+                }
+            },
+            {
+                path: 'slots',
+                component: Slots,
+                data: {
+                    title: 'slots',
+                    showInMenu: true,
+                    group: 'OTHER'
+                }
+            },
+            {
+                path: 'steps',
+                component: StepsByButtons,
+                data: {
+                    title: 'steps',
+                    showInMenu: true,
+                    group: 'OTHER'
+                }
+            },
+            {
+                path: 'defer-load',
+                component: DeferLoading,
+                data: {
+                    title: '@defer',
+                    showInMenu: true,
+                    group: 'OTHER'
+                }
+            },
+            {
+                path: 'svg',
+                component: SvgTemplate,
+                data: {
+                    title: 'svg',
+                    showInMenu: true,
+                    group: 'OTHER'
+                }
+            },
+            {
+                path: 'stop-repeat-content',
+                component: StopRepeatContent,
+                data: {
+                    title: 'ngTemplateOutlet',
+                    showInMenu: true,
+                    group: 'OTHER'
+                }
+            },
+            {
+                path: 'click-outside-directive',
+                component: ClickOutsideTest,
+                data: {
+                    title: 'click-outside',
+                    showInMenu: true,
+                    group: 'OTHER'
+                }
+            },
         ]
     },
     {

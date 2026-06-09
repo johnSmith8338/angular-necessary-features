@@ -1,0 +1,26 @@
+@use 'import' as app;
+
+:host {
+  display: flex;
+  flex-wrap: wrap;
+  gap: #{app.$padding-16 + 0px};
+  padding-block-start: calc(#{app.$header-height + 0px} + #{app.$padding-64 + 0px});
+}
+
+nav {
+  padding: #{app.$padding-16 + 0px};
+  max-inline-size: fit-content;
+  align-items: start;
+  @extend %card-view;
+}
+
+.content {
+  padding: #{app.$padding-16 + 0px};
+  inline-size: 100%;
+  max-inline-size: 100%;
+  @extend %card-view;
+
+  @media (width<=1024px) {
+    max-inline-size: 100%;
+  }
+}
