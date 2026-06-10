@@ -1,0 +1,11 @@
+<button class="button" (click)="isOpen.update(v=>!v)">Menu</button>
+
+@if (isOpen()) {
+    <ul (clickOutside)="isOpen.set(false)">
+        @for (item of menuItem; track item.link) {
+            <li>
+                <a [routerLink]="item.link" routerLinkActive="active">{{item.title}}</a>
+            </li>
+        }
+    </ul>
+}

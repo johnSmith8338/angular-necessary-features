@@ -4,6 +4,10 @@
   display: block;
 }
 
+p {
+  margin-block-start: 2em;
+}
+
 .content {
   padding: #{app.$padding-16 + 0px};
   margin-inline: auto;

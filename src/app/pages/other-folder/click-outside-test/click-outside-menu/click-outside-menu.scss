@@ -20,10 +20,13 @@ ul {
   border: 1px solid var(--black-transparent);
   display: grid;
   inline-size: max-content;
+  max-inline-size: #{app.$max-inline-size + 0px};
+  max-block-size: 240px;
   position: absolute;
   top: calc(100% + #{app.$padding-8 + 0px});
   right: 0;
   overflow: clip;
+  overflow-y: auto;
 
   li {
     display: grid;

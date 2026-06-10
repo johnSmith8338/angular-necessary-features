@@ -1,5 +1,5 @@
 import { inject, Injectable } from '@angular/core';
-import { Route, Router, Routes } from '@angular/router';
+import { Router, Routes } from '@angular/router';
 
 export interface MenuItem {
   title: string;
@@ -42,5 +42,9 @@ export class MenuSvc {
         this.collectRoutes(route.children, groups, currentPath)
       }
     }
+  }
+
+  getGroup(title: string): MenuItem[] {
+    return this.getMenuGroups().find(group => group.title === title)?.items ?? [];
   }
 }

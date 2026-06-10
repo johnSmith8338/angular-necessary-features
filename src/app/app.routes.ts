@@ -1,18 +1,10 @@
 import { Routes } from '@angular/router';
-import { ShowMore } from './pages/show-more/show-more';
 import { NotFound } from './pages/not-found/not-found';
-import { Slots } from './pages/slots/slots';
-import { StepsByButtons } from './pages/steps-by-buttons/steps-by-buttons';
-import { DeferLoading } from './pages/defer-loading/defer-loading';
-import { SvgTemplate } from './pages/svg-template/svg-template';
-import { StopRepeatContent } from './pages/stop-repeat-content/stop-repeat-content';
-import { ClickOutsideTest } from './pages/click-outside-test/click-outside-test';
-import { DragDropList } from './pages/drag-drop-list/drag-drop-list';
-import { DragResize } from './pages/drag-resize/drag-resize';
-import { CdkModal } from './pages/cdk-modal/cdk-modal';
-import { CopyToClipboard } from './pages/copy-to-clipboard/copy-to-clipboard';
-import { Accordion } from './pages/accordion/accordion';
-import { CssVariables } from './pages/css-variables/css-variables';
+import { DragDropList } from './pages/cdk-folder/drag-drop-list/drag-drop-list';
+import { DragResize } from './pages/cdk-folder/drag-resize/drag-resize';
+import { CdkModal } from './pages/cdk-folder/cdk-modal/cdk-modal';
+import { CopyToClipboard } from './pages/cdk-folder/copy-to-clipboard/copy-to-clipboard';
+import { Accordion } from './pages/cdk-folder/accordion/accordion';
 import { Home } from './pages/home/home';
 import { AngularForm } from './pages/angular-forms/angular-form/angular-form';
 import { ReactiveForm } from './pages/angular-forms/reactive-form/reactive-form';
@@ -24,7 +16,16 @@ import { AriaCombobox } from './pages/aria-components/aria-combobox/aria-combobo
 import { AriaListbox } from './pages/aria-components/aria-listbox/aria-listbox';
 import { AriaMultiselect } from './pages/aria-components/aria-multiselect/aria-multiselect';
 import { AriaTabs } from './pages/aria-components/aria-tabs/aria-tabs';
-import { CdkComponents } from './pages/cdk-components/cdk-components';
+import { CdkComponents } from './pages/cdk-folder/cdk-components/cdk-components';
+import { CssVariables } from './pages/other-folder/css-variables/css-variables';
+import { ShowMore } from './pages/other-folder/show-more/show-more';
+import { Slots } from './pages/other-folder/slots/slots';
+import { StepsByButtons } from './pages/other-folder/steps-by-buttons/steps-by-buttons';
+import { DeferLoading } from './pages/other-folder/defer-loading/defer-loading';
+import { SvgTemplate } from './pages/other-folder/svg-template/svg-template';
+import { StopRepeatContent } from './pages/other-folder/stop-repeat-content/stop-repeat-content';
+import { ClickOutsideTest } from './pages/other-folder/click-outside-test/click-outside-test';
+import { TemplateAnchorLinks } from './pages/other-folder/template-anchor-links/template-anchor-links';
 
 export const routes: Routes = [
     {
@@ -249,6 +250,15 @@ export const routes: Routes = [
                 component: ClickOutsideTest,
                 data: {
                     title: 'click-outside',
+                    showInMenu: true,
+                    group: 'OTHER'
+                }
+            },
+            {
+                path: 'template-anchor-links',
+                component: TemplateAnchorLinks,
+                data: {
+                    title: 'anchor-links',
                     showInMenu: true,
                     group: 'OTHER'
                 }

@@ -9,5 +9,5 @@ import { ClickOutsideMenu } from "./click-outside-menu/click-outside-menu";
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class ClickOutsideTest {
-  content = Array.from({ length: 4 });
+  content = Array.from({ length: 2 });
 }

@@ -1,0 +1,28 @@
+@use 'import' as app;
+
+:host {
+  display: block;
+  margin-inline: auto;
+  padding: #{app.$padding-16 + 0px};
+  @extend %card-view;
+}
+
+.links {
+  display: flex;
+  gap: #{app.$padding-16 + 0px};
+  margin-block-start: 1em;
+  padding-block-start: #{app.$padding-16 + 0px};
+  border-top: 1px solid var(--grey);
+}
+
+section {
+  padding-block-start: #{app.$padding-64 + 0px};
+}
+
+p {
+  margin-block-start: 1em;
+}
+
+.button {
+  inline-size: fit-content;
+}

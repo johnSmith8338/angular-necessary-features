@@ -1,5 +1,5 @@
 import { ChangeDetectionStrategy, Component, signal } from '@angular/core';
-import { StepTracker } from "../../directives/step-tracker";
+import { StepTracker } from '../../../directives/step-tracker';
 
 @Component({
   selector: 'app-steps-by-buttons',

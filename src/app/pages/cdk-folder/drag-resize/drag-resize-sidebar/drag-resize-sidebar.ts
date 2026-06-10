@@ -1,6 +1,6 @@
 import { CdkDragMove, DragDropModule } from '@angular/cdk/drag-drop';
 import { ChangeDetectionStrategy, Component, computed, inject, signal } from '@angular/core';
-import { ScreenWidthSvc } from '../../../services/screen-width-svc';
+import { ScreenWidthSvc } from '../../../../services/screen-width-svc';
 
 @Component({
   selector: 'app-drag-resize-sidebar',

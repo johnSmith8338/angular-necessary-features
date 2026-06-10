@@ -1,5 +1,5 @@
 import { ChangeDetectionStrategy, Component, effect, inject } from '@angular/core';
-import { DummyDataSvc } from '../../../services/dummy-data-svc';
+import { DummyDataSvc } from '../../../../services/dummy-data-svc';
 
 @Component({
   selector: 'app-defer-card',

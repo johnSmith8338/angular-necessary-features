@@ -10,8 +10,10 @@
         </svg>
     </ng-template>
 
-    <h2>Title</h2>
-    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quia, nobis maiores iste nostrum debitis eum laborum culpa, aliquam at provident obcaecati minus voluptates quod ad iure omnis saepe doloribus atque molestias eaque tempora nihil animi odio? Esse quos, saepe tempora distinctio magni dolore. Sequi ipsum iste beatae consectetur reprehenderit quia quam velit cum obcaecati quasi. Vel similique non quos. Blanditiis consequuntur praesentium neque ratione facere porro nesciunt dolores et, eum repudiandae pariatur hic accusantium sit laudantium. Alias sed iusto delectus? Non dolorum, quisquam repellendus sunt veniam saepe. Consequuntur, expedita exercitationem, modi obcaecati esse harum repellat maiores, eius natus iste dicta?</p>
+    <h2>ngTemplateOutlet used for buttons</h2>
+    <app-code-viewer [code]="buttonTemplateCode" />
+    <p>Template for "Sign up button"</p>
+    <app-code-viewer [code]="signupTemplateCode" />
 
     <button class="button" (click)="signUp()">
         <ng-container *ngTemplateOutlet="button; context: {
@@ -20,7 +22,8 @@
         }"></ng-container>
     </button>
 
-    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quis, dolore.</p>
+    <p>Template for "Show now"</p>
+    <app-code-viewer [code]="showTemplateCode" />
 
     <button class="button" (click)="showNow()">
         <ng-container *ngTemplateOutlet="button; context: {
@@ -28,7 +31,8 @@
         }"></ng-container>
     </button>
 
-    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aut dolorum similique et quia nesciunt deleniti, necessitatibus repellat quibusdam eos obcaecati sunt culpa molestiae, impedit sapiente quis animi ducimus esse laborum natus? Tenetur quas maxime aliquid quo temporibus animi nihil repellendus?</p>
+    <p>Template for "Sign in"</p>
+    <app-code-viewer [code]="signinTemplateCode" />
 
     <button class="button" (click)="signIn()">
         <ng-container *ngTemplateOutlet="button; context: {
