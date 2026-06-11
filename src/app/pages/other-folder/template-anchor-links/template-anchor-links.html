@@ -1,13 +1,13 @@
+<div class="links">
+    @for (item of content; track item.id) {
+        <a class="button outline" [routerLink]="[]" [fragment]="item.id">{{item.title}}</a>
+    }
+</div>
 <div class="info">
     <p>To make anchor links work in template, we should add to <strong>app.config.ts:</strong></p>
     <app-code-viewer [code]="routesTemplateCode" />
     <p>And for smoothness:</p>
     <app-code-viewer [code]="cssTemplateCode" />
-</div>
-<div class="links">
-    @for (item of content; track item.id) {
-        <a class="button outline" [routerLink]="[]" [fragment]="item.id">{{item.title}}</a>
-    }
 </div>
 @for (item of content; track $index) {
     <section [id]="item.id">

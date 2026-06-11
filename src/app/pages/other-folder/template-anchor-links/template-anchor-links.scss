@@ -9,10 +9,10 @@
 
 .links {
   display: flex;
-  gap: #{app.$padding-16 + 0px};
-  margin-block-start: 1em;
-  padding-block-start: #{app.$padding-16 + 0px};
-  border-top: 1px solid var(--grey);
+  flex-wrap: wrap;
+  gap: #{app.$padding-4 + 0px};
+  padding-block-end: #{app.$padding-16 + 0px};
+  border-bottom: 1px solid var(--grey);
 }
 
 section {
@@ -24,5 +24,9 @@ p {
 }
 
 .button {
-  inline-size: fit-content;
+  font-size: 14px;
+
+  @media (width<=480px) {
+    inline-size: 100%;
+  }
 }
