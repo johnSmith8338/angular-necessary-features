@@ -29,7 +29,15 @@
 
 .actions {
   display: flex;
+  flex-wrap: wrap;
   gap: #{app.$padding-8 + 0px};
+
+}
+
+.button {
+  @media (width<=1024px) {
+    inline-size: 100%;
+  }
 }
 
 .list {

@@ -9,6 +9,7 @@
   margin-inline: auto;
   margin-block-end: #{app.$padding-16 + 0px};
   display: flex;
+  flex-wrap: wrap;
   gap: #{app.$padding-16 + 0px};
 }
 

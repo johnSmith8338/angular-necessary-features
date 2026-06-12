@@ -4,9 +4,13 @@
     }
 </div>
 <div class="info">
-    <p>To make anchor links work in template, we should add to <strong>app.config.ts:</strong></p>
+    <em>In template links:</em>
+    <app-code-viewer [code]="linksTemplateCode" />
+    <em>In template sections to scroll:</em>
+    <app-code-viewer [code]="sectionTemplateCode" />
+    <em>To make anchor links work in template, we should add to <strong>app.config.ts:</strong></em>
     <app-code-viewer [code]="routesTemplateCode" />
-    <p>And for smoothness:</p>
+    <em>And for smoothness:</em>
     <app-code-viewer [code]="cssTemplateCode" />
 </div>
 @for (item of content; track $index) {

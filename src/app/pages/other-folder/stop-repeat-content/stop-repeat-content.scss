@@ -16,7 +16,7 @@ p {
 
 .button {
   position: relative;
-  min-inline-size: #{app.$min-inline-size + 0px};
+  min-inline-size: #{app.$input-inline-size + 0px};
   margin-inline: auto;
 
   .title {

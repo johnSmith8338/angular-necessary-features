@@ -10,6 +10,24 @@ import { CodeViewer } from "../../../components/code-viewer/code-viewer";
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class TemplateAnchorLinks {
+  linksTemplateCode = `
+    @for (
+      item of content; track item.id
+    ) {
+        <a class="button outline" 
+          [routerLink]="[]" 
+          [fragment]="item.id"
+        >{{item.title}}</a>
+    }
+  `
+
+  sectionTemplateCode = `
+    <section [id]="item.id">
+      <h3>#{{item.title}}</h3>
+      <p>{{item.text}}</p>
+    </section>
+  `
+
   routesTemplateCode = `
     withInMemoryScrolling({
       anchorScrolling: 'enabled'

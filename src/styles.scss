@@ -105,7 +105,7 @@
         border-radius: #{app.$border-radius-16 + 0px};
         border: 1px solid var(--black-transparent);
         padding: #{app.$padding-16 + 0px};
-        min-inline-size: #{app.$min-inline-size + 0px};
+        min-inline-size: #{app.$input-inline-size + 0px};
         max-inline-size: #{app.$max-inline-size + 0px};
         box-sizing: border-box;
     }

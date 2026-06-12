@@ -14,7 +14,7 @@
   border-radius: #{app.$border-radius-16 + 0px};
   border: 1px solid hsl(0 0% 0% / 0.2);
   padding-inline: #{app.$padding-16 + 0px};
-  min-inline-size: #{app.$min-inline-size + 0px};
+  min-inline-size: #{app.$input-inline-size + 0px};
   max-inline-size: #{app.$max-inline-size + 0px};
 }
 
@@ -26,7 +26,7 @@
 [ngComboboxInput] {
   opacity: 0;
   inline-size: 100%;
-  min-inline-size: #{app.$min-inline-size + 0px};
+  min-inline-size: #{app.$input-inline-size + 0px};
   max-inline-size: #{app.$max-inline-size + 0px};
   cursor: pointer;
 }
