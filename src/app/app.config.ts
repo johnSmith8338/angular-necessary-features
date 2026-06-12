@@ -9,7 +9,7 @@ export const appConfig: ApplicationConfig = {
     provideHttpClient(),
     provideBrowserGlobalErrorListeners(),
     provideRouter(routes,
-      withViewTransitions(),
+      // withViewTransitions(),
       // withHashLocation(),
       withInMemoryScrolling({
         anchorScrolling: 'enabled',

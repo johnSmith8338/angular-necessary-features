@@ -26,6 +26,7 @@ import { SvgTemplate } from './pages/other-folder/svg-template/svg-template';
 import { StopRepeatContent } from './pages/other-folder/stop-repeat-content/stop-repeat-content';
 import { ClickOutsideTest } from './pages/other-folder/click-outside-test/click-outside-test';
 import { TemplateAnchorLinks } from './pages/other-folder/template-anchor-links/template-anchor-links';
+import { OtherComponents } from './pages/other-folder/other-components/other-components';
 
 export const routes: Routes = [
     {
@@ -176,7 +177,7 @@ export const routes: Routes = [
     },
     {
         path: 'other-components',
-        component: CdkComponents,
+        component: OtherComponents,
         data: {
             title: 'other',
             showInMenu: true,
