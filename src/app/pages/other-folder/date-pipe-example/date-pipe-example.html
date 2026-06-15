@@ -1,0 +1,41 @@
+<article>
+    <em>Full date without pipe:</em>
+    <time [attr.datetime]="date">{{date}}</time>
+</article>
+<article>
+    <em>Date with default value of pipe <app-code-viewer [code]="default" />:</em>
+    <time [attr.datetime]="date">{{date | date}}</time>
+</article>
+<article>
+    <em>Date with pipe value <app-code-viewer [code]="short" />:</em>
+    <time [attr.datetime]="date">{{date | date:'short'}}</time>
+</article>
+<article>
+    <em>Date with pipe value <app-code-viewer [code]="medium" />:</em>
+    <time [attr.datetime]="date">{{date | date:'medium'}}</time>
+</article>
+<article>
+    <em>Date with pipe value <app-code-viewer [code]="long" />:</em>
+    <time [attr.datetime]="date">{{date | date:'long'}}</time>
+</article>
+<article>
+    <em>Date with pipe value <app-code-viewer [code]="fullDate" />:</em>
+    <time [attr.datetime]="date">{{date | date:'fullDate'}}</time>
+</article>
+<article>
+    <em>Date with pipe value <app-code-viewer [code]="shortTime" />:</em>
+    <time [attr.datetime]="date">{{date | date:'shortTime'}}</time>
+</article>
+<article>
+    <em>For custom format we can use:</em>
+    <p><span>year:</span><app-code-viewer [code]="customYear" /></p>
+    <p><span>months:</span><app-code-viewer [code]="customMonths" /></p>
+    <p><span>day:</span><app-code-viewer [code]="customDay" /></p>
+    <p><span>hour:</span><app-code-viewer [code]="customHour" /></p>
+    <p><span>minute:</span><app-code-viewer [code]="customMinute" /></p>
+    <p><span>second:</span><app-code-viewer [code]="customSecond" /></p>
+</article>
+<article>
+    <em>Custom date example: <app-code-viewer [code]="example" />:</em>
+    <time [attr.datetime]="date">{{date | date:'dd MMM yyyy hh:mm'}}</time>
+</article>

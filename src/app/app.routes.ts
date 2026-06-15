@@ -27,6 +27,7 @@ import { StopRepeatContent } from './pages/other-folder/stop-repeat-content/stop
 import { ClickOutsideTest } from './pages/other-folder/click-outside-test/click-outside-test';
 import { TemplateAnchorLinks } from './pages/other-folder/template-anchor-links/template-anchor-links';
 import { OtherComponents } from './pages/other-folder/other-components/other-components';
+import { DatePipeExample } from './pages/other-folder/date-pipe-example/date-pipe-example';
 
 export const routes: Routes = [
     {
@@ -260,6 +261,15 @@ export const routes: Routes = [
                 component: TemplateAnchorLinks,
                 data: {
                     title: 'anchor-links',
+                    showInMenu: true,
+                    group: 'OTHER'
+                }
+            },
+            {
+                path: 'date-pipe',
+                component: DatePipeExample,
+                data: {
+                    title: 'date-pipe',
                     showInMenu: true,
                     group: 'OTHER'
                 }

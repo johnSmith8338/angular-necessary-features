@@ -1,0 +1,28 @@
+@use 'import' as app;
+
+:host {
+  padding: #{app.$padding-16 + 0px};
+  margin-inline: auto;
+  @extend %card-view;
+}
+
+article {
+  display: grid;
+  gap: #{app.$padding-8 + 0px};
+
+  &:not(:first-child) {
+    margin-block-start: 1em;
+  }
+
+  em {
+    display: flex;
+    align-items: baseline;
+    flex-wrap: wrap;
+  }
+
+  p {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+  }
+}
