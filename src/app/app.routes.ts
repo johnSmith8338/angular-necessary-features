@@ -28,6 +28,7 @@ import { ClickOutsideTest } from './pages/other-folder/click-outside-test/click-
 import { TemplateAnchorLinks } from './pages/other-folder/template-anchor-links/template-anchor-links';
 import { OtherComponents } from './pages/other-folder/other-components/other-components';
 import { DatePipeExample } from './pages/other-folder/date-pipe-example/date-pipe-example';
+import { CountdownWithProgress } from './pages/other-folder/countdown-with-progress/countdown-with-progress';
 
 export const routes: Routes = [
     {
@@ -261,6 +262,15 @@ export const routes: Routes = [
                 component: TemplateAnchorLinks,
                 data: {
                     title: 'anchor-links',
+                    showInMenu: true,
+                    group: 'OTHER'
+                }
+            },
+            {
+                path: 'countdown-with-progress',
+                component: CountdownWithProgress,
+                data: {
+                    title: 'countdown',
                     showInMenu: true,
                     group: 'OTHER'
                 }

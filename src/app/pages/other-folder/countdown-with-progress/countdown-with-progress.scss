@@ -1,0 +1,52 @@
+@use 'import' as app;
+
+:host {
+  inline-size: 100%;
+  padding: #{app.$padding-16 + 0px};
+  margin-inline: auto;
+  gap: #{app.$padding-16 + 0px};
+  @extend %card-view;
+}
+
+.timer {
+  display: flex;
+  flex-wrap: wrap;
+  gap: #{app.$padding-8 + 0px};
+}
+
+.label {
+  &.error {
+    color: var(--red);
+  }
+}
+
+.value {
+  &.warn {
+    color: var(--orange);
+  }
+
+  &.end {
+    color: var(--red);
+  }
+}
+
+.progress {
+  width: 100%;
+  border: 1px solid var(--light-grey);
+  border-radius: #{app.$border-radius-4 + 0px};
+}
+
+.bar {
+  display: grid;
+  block-size: 16px;
+  background-color: var(--green);
+  transition: width var(--duration, 1s) linear, background-color 0.2s ease;
+
+  &.warn {
+    background-color: var(--orange);
+  }
+
+  &.end {
+    background-color: var(--red);
+  }
+}

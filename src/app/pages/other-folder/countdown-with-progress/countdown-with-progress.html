@@ -1,0 +1,22 @@
+<div class="timer">
+    @if (secondsRamain()) {
+        <em class="label">Session expires in:</em>
+        <strong class="value"
+            [class.warn]="secondsRamain() <= warnAt"
+            [class.end]="secondsRamain() <= endAt"
+        >{{formatedRemain()}}</strong>
+    }@else {
+        <em class="label error">Session has expired!</em>
+    }
+</div>
+<div class="progress">
+    <span class="bar" 
+        [style.width.%]="(secondsRamain() / total * 100)"
+        [style.--duration]="resetting()?'0s':'1s'"
+        [class.warn]="secondsRamain() <= warnAt"
+        [class.end]="secondsRamain() <= endAt">
+    </span>
+</div>
+@if (secondsRamain()===0) {
+    <button class="button" type="button" (click)="refreshSession()">Restart</button>
+}
